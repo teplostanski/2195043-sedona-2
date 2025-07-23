@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Игорь](https://up.htmlacademy.ru/htmlcss-individual/2/user/2195043).
-* Наставник: `Неизвестно`.
+* Наставник: [Екатерина Комнатная] (https://htmlacademy.ru/profile/id215761).
 
 ---
 
