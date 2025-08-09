@@ -8,7 +8,7 @@
     <!-- TODO: Не забыть удалить подсказку
     Порядок классов: текущий блок, элемент, модификатор | утилитарный блок, элемент, модификатор | атомарные классы -->
     <header class="main-header">
-      <a class="logo__link link" href="index.html">
+      <a class="logo link" href="index.html">
         <img
           class="logo__image"
           src="images/logo.svg"
@@ -73,110 +73,106 @@
           </p>
         </header>
 
-        <div class="advantages__grid">
-          <div
-            class="advantages__item advantages__item--primary"
-            data-grid-area="item1"
-          >
-            <h3
-              class="advantages__title title title--secondary text-md uppercase"
-            >
-              Настоящий городок
-            </h3>
-            <hr class="advantages__divider advantages__divider--secondary" />
-            <p
-              class="advantages__description description description--secondary text-base"
-            >
-              Седона — не аттракцион для туристов, там течёт своя жизнь
-            </p>
-          </div>
+        <ul class="advantages__list list">
+          <li class="advantages__item advantages__item--primary">
+            <figure class="advantages__item-figure">
+              <figcaption class="advantages__item-wrapper">
+                <h3
+                  class="advantages__title title title--secondary text-md uppercase"
+                >
+                  Настоящий городок
+                </h3>
 
-          <img
-            class="advantages__image"
-            src="images/advantages-city.jpg"
-            width="800"
-            height="385"
-            alt="Город Седона"
-            data-grid-area="image1"
-          />
+                <p
+                  class="advantages__description description description--secondary"
+                >
+                  Седона — не аттракцион для туристов, там течёт своя жизнь
+                </p>
+              </figcaption>
 
-          <div
-            class="advantages__item advantages__item--default"
-            data-grid-area="item2"
-          >
-            <h3
-              class="advantages__title title title--primary text-md uppercase"
-            >
-              Небольшая площадь
-            </h3>
-            <hr class="advantages__divider advantages__divider--primary" />
-            <p
-              class="advantages__description description description--primary text-base"
-            >
-              Все достопримечательности находятся очень близко
-            </p>
-          </div>
+              <img
+                class="advantages__image"
+                src="images/advantages-city.jpg"
+                width="800"
+                height="385"
+                alt="Город Седона"
+              />
+            </figure>
+          </li>
 
-          <div
-            class="advantages__item advantages__item--secondary"
-            data-grid-area="item3"
-          >
-            <h3
-              class="advantages__title title title--primary text-md uppercase"
-            >
-              Красивая дорога
-            </h3>
-            <hr class="advantages__divider advantages__divider--primary" />
-            <p
-              class="advantages__description description description--primary text-base"
-            >
-              Ехать в Седону из Лас-Вегаса совсем не скучно!
-            </p>
-          </div>
+          <li class="advantages__item advantages__item--default">
+            <div class="advantages__item-wrapper">
+              <h3
+                class="advantages__title title title--primary text-md uppercase"
+              >
+                Небольшая площадь
+              </h3>
 
-          <div
-            class="advantages__item advantages__item--default"
-            data-grid-area="item4"
-          >
-            <h3
-              class="advantages__title title title--primary text-md uppercase"
-            >
-              Мало туристов
-            </h3>
-            <hr class="advantages__divider advantages__divider--primary" />
-            <p
-              class="advantages__description description description--primary text-base"
-            >
-              Большинство едет в Гранд Каньон и толпится там
-            </p>
-          </div>
+              <p
+                class="advantages__description description description--primary"
+              >
+                Все достопримечательности находятся очень близко
+              </p>
+            </div>
+          </li>
 
-          <img
-            class="advantages__image"
-            src="images/advantages-bridge.jpg"
-            width="800"
-            height="385"
-            alt="Мост дьявола"
-            data-grid-area="image2"
-          />
+          <li class="advantages__item advantages__item--secondary">
+            <div class="advantages__item-wrapper">
+              <h3
+                class="advantages__title title title--primary text-md uppercase"
+              >
+                Красивая дорога
+              </h3>
 
-          <div
-            class="advantages__item advantages__item--primary"
-            data-grid-area="item5"
-          >
-            <h3
-              class="advantages__title title title--secondary text-md uppercase"
-            >
-              Там есть мост дьявола
-            </h3>
-            <hr class="advantages__divider advantages__divider--secondary" />
-            <p
-              class="advantages__description description description--secondary text-base"
-            >
-              Да, по нему можно пройти! Если вы осмелитесь, разумеется
-            </p>
-          </div>
-        </div>
+              <p
+                class="advantages__description description description--primary"
+              >
+                Ехать в Седону из Лас-Вегаса совсем не скучно!
+              </p>
+            </div>
+          </li>
+
+          <li class="advantages__item advantages__item--default">
+            <div class="advantages__item-wrapper">
+              <h3
+                class="advantages__title title title--primary text-md uppercase"
+              >
+                Мало туристов
+              </h3>
+
+              <p
+                class="advantages__description description description--primary"
+              >
+                Большинство едет в Гранд Каньон и толпится там
+              </p>
+            </div>
+          </li>
+
+          <li class="advantages__item advantages__item--primary">
+            <figure class="advantages__item-figure">
+              <figcaption class="advantages__item-wrapper">
+                <h3
+                  class="advantages__title title title--secondary text-md uppercase"
+                >
+                  Там есть мост дьявола
+                </h3>
+
+                <p
+                  class="advantages__description description description--secondary"
+                >
+                  Да, по нему можно пройти! Если вы осмелитесь, разумеется
+                </p>
+              </figcaption>
+              <img
+                class="advantages__image"
+                src="images/advantages-bridge.jpg"
+                width="800"
+                height="385"
+                alt="Мост дьявола"
+              />
+            </figure>
+          </li>
+        </ul>
       </section>
 
       <section class="services">
@@ -190,70 +186,34 @@
           </p>
         </header>
 
-        <div class="services__grid">
-          <div
-            class="services__item services__item--secondary"
-            data-grid-area="item1"
-          >
-            <img
-              class="services__icon"
-              src="images/services-house.svg"
-              width="75"
-              height="72"
-              alt="Жильё"
-            />
+        <ul class="services__list list">
+          <li class="services__item services__item--secondary">
             <h3 class="services__title title title--primary text-md uppercase">
               Жильё
             </h3>
-            <p
-              class="services__description description description--primary text-base"
-            >
+            <p class="services__description description description--primary">
               Рекомендуем пожить в настоящем мотеле, всё как в кино!
             </p>
-          </div>
+          </li>
 
-          <div
-            class="services__item services__item--default"
-            data-grid-area="item2"
-          >
-            <img
-              class="services__icon"
-              src="images/services-burger.svg"
-              width="75"
-              height="72"
-              alt="Еда"
-            />
+          <li class="services__item services__item--default">
             <h3 class="services__title title title--primary text-md uppercase">
               Еда
             </h3>
-            <p
-              class="services__description description description--primary text-base"
-            >
+            <p class="services__description description description--primary">
               Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!
             </p>
-          </div>
+          </li>
 
-          <div
-            class="services__item services__item--secondary"
-            data-grid-area="item3"
-          >
-            <img
-              class="services__icon"
-              src="images/services-gift.svg"
-              width="75"
-              height="72"
-              alt="Сувениры"
-            />
+          <li class="services__item services__item--secondary">
             <h3 class="services__title title title--primary text-md uppercase">
               Сувениры
             </h3>
-            <p
-              class="services__description description description--primary text-base"
-            >
+            <p class="services__description description description--primary">
               Не только китайского, но и настоящего местного производства!
             </p>
-          </div>
-        </div>
+          </li>
+        </ul>
       </section>
 
       <section class="search">
