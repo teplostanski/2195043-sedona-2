@@ -6,7 +6,7 @@
     <title>Каталог</title>
   </head>
   <body>
-    <header class="main-header">
+    <header class="main-header" data-test="header">
       <a class="logo__link link" href="index.html">
         <img
           class="logo__image"
@@ -49,7 +49,7 @@
       </div>
     </header>
 
-    <main class="main-inner">
+    <main class="main-inner" data-test="main">
       <section class="catalog">
         <header class="catalog__header">
           <h1 class="catalog__title">Гостиницы Седоны</h1>
@@ -65,7 +65,7 @@
           </ol>
         </header>
 
-        <section class="filter">
+        <section class="filter" data-test="filter">
           <h2 class="visually-hidden" id="hotels-filter-title">Фильтр гостиниц</h2>
 
           <form
@@ -191,7 +191,7 @@
           </form>
         </section>
 
-        <section class="catalog__results">
+        <section class="catalog__results" data-test="catalog">
           <h2 class="visually-hidden">Найденные гостиницы</h2>
 
           <div class="catalog__view">
@@ -350,8 +350,8 @@
       </section>
     </main>
 
-    <footer class="main-footer">
-      <section class="subscribe">
+    <footer class="main-footer" data-test="footer">
+      <section class="subscribe" data-test="subscribe">
         <h2 class="title title--secondary text-lg uppercase">
           Подпишитесь на рассылку
         </h2>

@@ -7,7 +7,7 @@
   <body>
     <!-- TODO: Не забыть удалить подсказку
     Порядок классов: текущий блок, элемент, модификатор | утилитарный блок, элемент, модификатор | атомарные классы -->
-    <header class="main-header">
+    <header class="main-header" data-test="header">
       <a class="logo link" href="index.html">
         <img
           class="logo__image"
@@ -50,8 +50,8 @@
       </div>
     </header>
 
-    <main class="main">
-      <section class="hero">
+    <main class="main" data-test="main">
+      <section class="hero" data-test="hero">
         <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
         <img
           class="hero__image"
@@ -62,7 +62,7 @@
         />
       </section>
 
-      <section class="advantages">
+      <section class="advantages" data-test="advantages">
         <header class="advantages__header">
           <h2 class="visually-hidden">Преимущества</h2>
           <p class="title title--primary text-lg uppercase">
@@ -216,7 +216,7 @@
         </ul>
       </section>
 
-      <section class="search">
+      <section class="search" data-test="search">
         <h2 class="visually-hidden">Поиск гостиницы</h2>
 
         <h2 class="title title--primary text-lg uppercase">
@@ -231,8 +231,8 @@
         >
       </section>
 
-      <footer class="main-footer">
-        <section class="subscribe">
+      <footer class="main-footer" data-test="footer">
+        <section class="subscribe subscribe--background" data-test="subscribe">
           <h2 class="title title--secondary text-lg uppercase">
             Подпишитесь на рассылку
           </h2>
