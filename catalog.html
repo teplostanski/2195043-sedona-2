@@ -68,8 +68,13 @@
     <main class="main" data-test="main">
       <section class="catalog">
         <header class="catalog__header">
-          <h1 class="catalog__title text-xxl text-color-alt">Гостиницы Седоны</h1>
-          <ol class="breadcrumbs list text-color-alt" aria-label="Хлебные крошки">
+          <h1 class="catalog__title text-xxl text-color-alt">
+            Гостиницы Седоны
+          </h1>
+          <ol
+            class="breadcrumbs list text-color-alt"
+            aria-label="Хлебные крошки"
+          >
             <li class="breadcrumbs__item">
               <a href="index.html" class="breadcrumbs__link">
                 <span class="visually-hidden">Главная</span>
@@ -95,7 +100,9 @@
             aria-labelledby="hotels-filter-title"
           >
             <fieldset class="filter__group">
-              <legend class="filter__title text-sm bold">Инфраструктура:</legend>
+              <legend class="filter__title text-sm bold">
+                Инфраструктура:
+              </legend>
               <ul class="filter__list list">
                 <li class="filter__item">
                   <label class="filter__control">
@@ -202,23 +209,31 @@
                 />
               </div>
             </fieldset>
-            <button class="filter__button filter__button--submit button button--secondary" type="submit">
+            <button
+              class="filter__button filter__button--submit button button--secondary"
+              type="submit"
+            >
               Применить
             </button>
-            <button class="filter__button filter__button--reset button" type="reset">
+            <button
+              class="filter__button filter__button--reset button"
+              type="reset"
+            >
               Сбросить
             </button>
           </form>
         </section>
       </section>
 
-      <section class="catalog__results" data-test="catalog">
+      <section class="results" data-test="catalog">
         <h2 class="visually-hidden">Найденные гостиницы</h2>
 
-        <div class="catalog__view">
-          <p>Найдено гостиниц: <span class="catalog__amount">38</span></p>
+        <div class="results__view">
+          <p class="text-xl uppercase bold">
+            Найдено гостиниц: <span class="results__amount">38</span>
+          </p>
           <select
-            class="catalog__sort"
+            class="results__sort"
             aria-label="Сортировка результата поиска"
           >
             <option value="popular">Сначала популярные</option>
@@ -226,10 +241,10 @@
             <option value="expensive">Сначала дорогие</option>
           </select>
           <div role="group" aria-label="Переключение вида каталога">
-            <ul class="catalog__view-list">
-              <li class="catalog__view-item">
+            <ul class="results__view-list list">
+              <li class="results__view-item  results__view-item--current">
                 <a
-                  class="catalog__view-link"
+                  class="results__view-link"
                   href="#"
                   role="button"
                   aria-pressed="true"
@@ -237,9 +252,9 @@
                   <span class="visually-hidden">Показать плитку</span>
                 </a>
               </li>
-              <li class="catalog__view-item">
+              <li class="results__view-item">
                 <a
-                  class="catalog__view-link"
+                  class="results__view-link"
                   href="#"
                   role="button"
                   aria-pressed="false"
@@ -247,9 +262,9 @@
                   <span class="visually-hidden">Показать карточки</span>
                 </a>
               </li>
-              <li class="catalog__view-item">
+              <li class="results__view-item">
                 <a
-                  class="catalog__view-link"
+                  class="results__view-link"
                   href="#"
                   role="button"
                   aria-pressed="false"
@@ -261,11 +276,11 @@
           </div>
         </div>
 
-        <div class="catalog__cards">
-          <ul class="catalog__cards-list">
+        <div class="results__cards">
+          <ul class="results__cards-list list">
             <li class="hotel-card">
-              <a class="hotel-card__link" href="#">
-                <h3 class="hotel-card__title">Amara Resort & Spa</h3>
+              <a class="hotel-card__link link text-color-base" href="#">
+                <h3 class="hotel-card__title text-sm">Amara Resort & Spa</h3>
                 <img
                   class="hotel-card__img"
                   src="./images/hotels/amara-resort-and-spa.jpg"
@@ -278,8 +293,8 @@
                 <span class="hotel-card__type">Гостиница</span>
                 <span class="hotel-card__price">от 4000 ₽</span>
               </p>
-              <a class="hotel-card__details" href="#">Подробнее</a>
-              <button class="hotel-card__favorites" aria-pressed="false">
+              <a class="button button--primary button--link" href="#">Подробнее</a>
+              <button class="button button--secondary" aria-pressed="false">
                 В избранное
               </button>
               <div class="hotel-card__rating">
@@ -291,8 +306,8 @@
               </div>
             </li>
             <li class="hotel-card">
-              <a class="hotel-card__link" href="#">
-                <h3 class="hotel-card__title">Villas at Poco Diablo</h3>
+              <a class="hotel-card__link link text-color-base" href="#">
+                <h3 class="hotel-card__title text-sm">Villas at Poco Diablo</h3>
                 <img
                   class="hotel-card__img"
                   src="./images/hotels/villas-at-poco-diablo.jpg"
@@ -305,8 +320,8 @@
                 <span class="hotel-card__type">Гостиница</span>
                 <span class="hotel-card__price">от 5000 ₽</span>
               </p>
-              <a class="hotel-card__details" href="#">Подробнее</a>
-              <button class="hotel-card__favorites" aria-pressed="true">
+              <a class="button button--primary button--link" href="#">Подробнее</a>
+              <button class="button button--secondary" aria-pressed="true">
                 В избранном
               </button>
               <div class="hotel-card__rating">
@@ -318,8 +333,8 @@
               </div>
             </li>
             <li class="hotel-card">
-              <a class="hotel-card__link" href="#">
-                <h3 class="hotel-card__title">Desert Quail Inn</h3>
+              <a class="hotel-card__link link text-color-base" href="#">
+                <h3 class="hotel-card__title text-sm">Desert Quail Inn</h3>
                 <img
                   class="hotel-card__img"
                   src="./images/hotels/desert-quail-inn.jpg"
@@ -332,8 +347,8 @@
                 <span class="hotel-card__type">Гостиница</span>
                 <span class="hotel-card__price">от 2500 ₽</span>
               </p>
-              <a class="hotel-card__details" href="#">Подробнее</a>
-              <button class="hotel-card__favorites" aria-pressed="false">
+              <a class="button button--primary button--link" href="#">Подробнее</a>
+              <button class="button button--secondary" aria-pressed="false">
                 В избранное
               </button>
               <div class="hotel-card__rating">
@@ -345,8 +360,8 @@
               </div>
             </li>
             <li class="hotel-card">
-              <a class="hotel-card__link" href="#">
-                <h3 class="hotel-card__title">GreenTree Inn</h3>
+              <a class="hotel-card__link link text-color-base" href="#">
+                <h3 class="hotel-card__title text-sm">GreenTree Inn</h3>
                 <img
                   class="hotel-card__img"
                   src="./images/hotels/green-tree-inn.jpg"
@@ -359,8 +374,8 @@
                 <span class="hotel-card__type">Гостиница</span>
                 <span class="hotel-card__price">от 1500 ₽</span>
               </p>
-              <a class="hotel-card__details" href="#">Подробнее</a>
-              <button class="hotel-card__favorites" aria-pressed="false">
+              <a class="button button--primary button--link" href="#">Подробнее</a>
+              <button class="button button--secondary" aria-pressed="false">
                 В избранное
               </button>
               <div class="hotel-card__rating">
@@ -375,7 +390,7 @@
         </div>
 
         <div class="pagination" aria-label="Страницы результата поиска">
-          <ul class="pagination__list">
+          <ul class="pagination__list list">
             <li class="pagination__item">
               <a
                 class="pagination__link pagination__link--current"
