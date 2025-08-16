@@ -256,3 +256,13 @@ body {
 .hero__image {
   margin: 51px auto 0;
 }
+
+/* Advantages */
+.advantages__header {
+  margin: 69px auto;
+  text-align: center;
+}
+
+.advantages__header-title {
+  margin: 0 0 25px;
+}
