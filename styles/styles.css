@@ -1,0 +1,242 @@
+:root {
+  /* Typography */
+  --text-xl: 60px;
+  --text-lg: 30px;
+  --text-md: 24px;
+  --text-sm: 22px;
+  --text-xs: 20px;
+  --text-base: 18px;
+  --line-height-xl: 78px;
+  --line-height-lg: 36px;
+  --line-height-md: 28px;
+  --line-height-sm: 26px;
+  --line-height-xs: 24px;
+  --line-height-base: 21px;
+
+  /* Color Bases*/
+  --color-black: #00000;
+  --color-dark-gray: #333333;
+  --color-blue: #83b3d3;
+  --color-blue-second: rgba(131, 179, 211, 12%);
+  --color-blue-second-2: rgba(131, 179, 211, 20%);
+  --color-white: #ffffff;
+  --color-white-second: rgba(255, 255, 255, 30%);
+  --color-red: #ff5757;
+  --color-brown: #756157;
+  --color-green: #7db54f;
+  --color-ocean: #3f5e72;
+  --color-gray: #e5e5e5;
+  --color-gray-second: #f2f2f2;
+
+  /* Color Typography */
+  --color-text-base: var(--color-black);
+  --color-text-alt: var(--color-white);
+
+  /* Color Button */
+  --color-button-primary: var(--color-brown);
+  --color-button-secondary: var(--color-blue);
+  --color-button-active: var(--color-green);
+  --color-button-text: var(--color-white);
+
+  /* Color Badge */
+  --color-badge-bg: var(--color-green);
+  --color-badge-fg: var(--color-white);
+
+  /* Button Typography */
+  --button-text-base: 16px;
+  --button-text-large: 20px;
+  --button-line-height-base: 20px;
+  --button-line-height-large: 36px;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: local("PT Sans"), url("../fonts/ptsans-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: local("PT Sans"), url("../fonts/ptsans-700.woff2") format("woff2");
+}
+
+html {
+  background-color: var(--color-gray-second);
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  font-size: var(--text-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text-base);
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.20);
+  min-height: 100dvh;
+}
+
+.main {
+  flex: 1;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.text-xl { /*h1 60/78*/
+  font-size: var(--text-xl);
+  line-height: var(--line-height-xl);
+}
+
+.text-lg { /*h2 30/36*/
+  font-size: var(--text-lg);
+  line-height: var(--line-height-lg);
+}
+
+.text-md { /*h3 24/28*/
+  font-size: var(--text-md);
+  line-height: var(--line-height-md);
+}
+
+.text-sm { /*p 22/26*/
+  font-size: var(--text-sm);
+  line-height: var(--line-height-sm);
+}
+
+.text-xs { /*h4 20/24*/
+  font-size: var(--text-xs);
+  line-height: var(--line-height-xs);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.text-color-base {
+  color: var(--color-text-base)
+}
+
+.text-color-alt {
+  color: var(--color-text-alt)
+}
+
+.link {
+  text-decoration: none;
+}
+
+.button {
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  color: var(--color-button-text);
+  padding: 8px 34px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: var(--button-text-base);
+  line-height: var(--button-line-height-base);
+
+  &.button--large {
+    padding: 8px 50px;
+    font-size: var(--button-text-large);
+    line-height: var(--line-height-lg);
+  }
+
+  &.button--primary {
+    background: var(--color-button-primary);
+  }
+
+  &.button--secondary {
+    background: var(--color-button-secondary);
+  }
+
+  &.button--active {
+    background: var(--color-button-active);
+  }
+
+  &.button--link {
+    display: inline-block;
+  }
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+.main-header {
+  height: 64px;
+  padding: 0 70px;
+}
+
+.logo {
+  z-index: 1;
+}
+
+.logo__image {
+  width: 140px;
+  height: 70px;
+  margin-right: 30px;
+}
+
+.nav {
+  padding: 0 16px;
+}
+
+.nav__item {
+  padding: 20px 0;
+
+  &.nav__item--current {
+    border: solid var(--color-brown);
+    border-width: 0 0 2px 0;
+    z-index: 1;
+  }
+}
+
+.actions__item {
+  width: 20px;
+  height: 20px;
+  background: var(--color-gray);
+  margin: 0 12px;
+  position: relative;
+}
+
+.actions__item .badge {
+  position: absolute;
+  top: -11px;
+  right: -8px;
+}
+
+.badge {
+  background-color: var(--color-badge-bg);
+  border-radius: 50%;
+  font-size: 10px;
+  line-height: 10px;
+  width: 20px;
+  height: 20px;
+  color: var(--color-badge-fg);
+}

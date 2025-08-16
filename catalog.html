@@ -9,36 +9,43 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
     />
-    <link rel="stylesheet" href="./styles/fonts.css" />
-    <link rel="stylesheet" href="./styles/index.css" />
-    
+    <link rel="stylesheet" href="./styles/styles.css" />
+
     <title>Каталог</title>
   </head>
   <body>
     <header class="main-header" data-test="header">
-      <a class="logo link" href="index.html">
-        <img
-          class="logo__image"
-          src="./images/logos/logo.svg"
-          width="140"
-          height="70"
-          alt="Логотип Седона"
-        />
-      </a>
+      <div class="main-header__container">
+        <a class="logo link" href="index.html">
+          <img
+            class="logo__image"
+            src="./images/logos/logo.svg"
+            width="140"
+            height="70"
+            alt="Логотип Седона"
+          />
+        </a>
 
-      <nav class="nav" aria-label="Основная навигация">
-        <ul class="nav__list list">
-          <li class="nav__item nav__item--current">
-            <a class="nav__link link" href="index.html">Главная</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link link" href="about.html">О Седоне</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link link" href="catalog.html">Гостиницы</a>
-          </li>
-        </ul>
-      </nav>
+        <nav class="nav" aria-label="Основная навигация">
+          <ul class="nav__list list">
+            <li class="nav__item">
+              <a class="link text-color-base bold text-xs" href="index.html"
+                >Главная</a
+              >
+            </li>
+            <li class="nav__item">
+              <a class="link text-color-base bold text-xs" href="about.html"
+                >О Седоне</a
+              >
+            </li>
+            <li class="nav__item nav__item--current">
+              <a class="link text-color-base bold text-xs" href="catalog.html"
+                >Гостиницы</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
 
       <div class="actions">
         <ul class="actions__list list">
@@ -54,7 +61,7 @@
             </a>
           </li>
         </ul>
-        <a class="actions__button button" href="#">Хочу сюда</a>
+        <a class="button button--link button--primary" href="#">Хочу сюда!</a>
       </div>
     </header>
 
