@@ -84,6 +84,14 @@ body {
   min-height: 100dvh;
 }
 
+figure {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
 .main {
   flex: 1;
 }
@@ -277,4 +285,17 @@ body {
 
 .advantages__item--secondary {
   background-color: var(--color-blue-second-2);
+}
+
+.services__header {
+  margin: 64px auto;
+  text-align: center;
+}
+
+.services__header-title {
+  margin: 0 0 20px;
+}
+
+.services__item--background-alt {
+  background-color: var(--color-blue-second);
 }
