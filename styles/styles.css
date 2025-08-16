@@ -362,3 +362,22 @@ img {
 }
 
 /* catalog.html */
+.catalog {
+  background-color: var(--color-brown);
+  background-image: url("../images/backgrounds/filters-bg.jpg");
+  background-size: cover;
+  padding: 35px 70px 70px;
+}
+
+.catalog__title {
+  margin: 0;
+}
+
+.breadcrumbs__link {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.filter__group {
+  border: none;
+}
