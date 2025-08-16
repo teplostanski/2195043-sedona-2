@@ -221,10 +221,10 @@
 
     <footer class="main-footer" data-test="footer">
       <section class="subscribe subscribe--background" data-test="subscribe">
-        <h2 class="title title--secondary text-lg uppercase">
+        <h2 class="text-color-alt text-lg uppercase">
           Подпишитесь на рассылку
         </h2>
-        <p class="description description--secondary text-sm">
+        <p class="text-color-alt text-sm">
           Только полезная информация и никакого спама, честное бойскаутское!
         </p>
 
@@ -234,15 +234,14 @@
           method="post"
           aria-label="Форма подписки на рассылку"
         >
-          <label class="visually-hidden">
-            Email
-            <input
-              class="subscribe__input"
-              type="email"
-              name="subscribe-email"
-              placeholder="Ваш e-mail"
-            />
-          </label>
+          <label for="subscribe-email" class="visually-hidden"> Email </label>
+          <input
+            id="subscribe-email"
+            class="subscribe__input"
+            type="email"
+            name="subscribe-email"
+            placeholder="Ваш e-mail"
+          />
           <button
             class="subscribe__button button button--large button--secondary"
             type="submit"

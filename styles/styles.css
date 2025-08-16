@@ -249,6 +249,22 @@ img {
   color: var(--color-badge-fg);
 }
 
+/* Footer */
+.subscribe--background {
+  background-color: var(--color-brown);
+}
+
+.contacts {
+  font-style: normal;
+}
+
+.phone {
+  font-size: 40px;
+  line-height: 40px;
+  color: var(--color-text-base);
+}
+
+/* index.html */
 /* Hero */
 .hero {
   height: 485px;
@@ -313,3 +329,5 @@ img {
 .search__description {
   margin: 0 0 54px;
 }
+
+/* catalog.html */
