@@ -71,7 +71,7 @@ html {
 }
 
 body {
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: var(--text-base);
   line-height: var(--line-height-base);
   color: var(--color-text-base);
@@ -80,7 +80,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   background-color: white;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.20);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
   min-height: 100dvh;
 }
 
@@ -109,27 +109,32 @@ img {
   overflow: hidden;
 }
 
-.text-xxl { /*h1 60/78*/
+.text-xxl {
+  /*h1 60/78*/
   font-size: var(--text-xxl);
   line-height: var(--line-height-xxl);
 }
 
-.text-xl { /*h2 30/36*/
+.text-xl {
+  /*h2 30/36*/
   font-size: var(--text-xl);
   line-height: var(--line-height-xl);
 }
 
-.text-lg { /*h3 24/28*/
+.text-lg {
+  /*h3 24/28*/
   font-size: var(--text-lg);
   line-height: var(--line-height-lg);
 }
 
-.text-md { /*p 22/26*/
+.text-md {
+  /*p 22/26*/
   font-size: var(--text-md);
   line-height: var(--line-height-md);
 }
 
-.text-sm { /*h4 20/24*/
+.text-sm {
+  /*h4 20/24*/
   font-size: var(--text-sm);
   line-height: var(--line-height-sm);
 }
@@ -143,11 +148,11 @@ img {
 }
 
 .text-color-base {
-  color: var(--color-text-base)
+  color: var(--color-text-base);
 }
 
 .text-color-alt {
-  color: var(--color-text-alt)
+  color: var(--color-text-alt);
 }
 
 .link {
@@ -252,6 +257,8 @@ img {
 /* Footer */
 .subscribe--background {
   background-color: var(--color-brown);
+  background-image: url("../images/backgrounds/subscribe-bg.jpg");
+  background-size: cover;
 }
 
 .contacts {
@@ -303,26 +310,33 @@ img {
   background-color: var(--color-blue-second-2);
 }
 
-.services__header {
-  margin: 64px auto;
+.services {
+  padding: 64px 0 0;
   text-align: center;
 }
 
-.services__header-title {
+.services__title {
   margin: 0 0 20px;
 }
 
-.services__header-description {
-  margin: 0;
+.services__description {
+  margin: 0 0 64px;
 }
 
 .services__item--background-alt {
   background-color: var(--color-blue-second);
 }
 
+.services__card-title {
+  margin: 0;
+}
+
+.services__card-description {
+  margin: 0;
+}
+
 .search {
   text-align: center;
-  text-wrap-style: pretty;
   padding: 96px 0;
 }
 
@@ -331,6 +345,19 @@ img {
 }
 
 .search__description {
+  margin: 0 0 54px;
+}
+
+.subscribe {
+  text-align: center;
+  padding: 96px 0 104px;
+}
+
+.subscribe__title {
+  margin: 0 0 20px;
+}
+
+.subscribe__description {
   margin: 0 0 54px;
 }
 
