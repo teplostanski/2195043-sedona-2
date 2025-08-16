@@ -240,3 +240,19 @@ body {
   height: 20px;
   color: var(--color-badge-fg);
 }
+
+/* Hero */
+.hero {
+  height: 485px;
+  display: flex;
+  background-color: var(--color-brown);
+  background-image: url("../images/backgrounds/hero-decoration-bg.svg"),
+    url("../images/backgrounds/hero-bg.jpg");
+  background-size: 1200px 57px, cover;
+  background-position: center bottom, center center;
+  background-repeat: no-repeat;
+}
+
+.hero__image {
+  margin: 51px auto 0;
+}
