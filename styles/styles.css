@@ -1,16 +1,16 @@
 :root {
   /* Typography */
-  --text-xl: 60px;
-  --text-lg: 30px;
-  --text-md: 24px;
-  --text-sm: 22px;
-  --text-xs: 20px;
+  --text-xxl: 60px;
+  --text-xl: 30px;
+  --text-lg: 24px;
+  --text-md: 22px;
+  --text-sm: 20px;
   --text-base: 18px;
-  --line-height-xl: 78px;
-  --line-height-lg: 36px;
-  --line-height-md: 28px;
-  --line-height-sm: 26px;
-  --line-height-xs: 24px;
+  --line-height-xxl: 78px;
+  --line-height-xl: 36px;
+  --line-height-lg: 28px;
+  --line-height-md: 26px;
+  --line-height-sm: 24px;
   --line-height-base: 21px;
 
   /* Color Bases*/
@@ -109,29 +109,29 @@ img {
   overflow: hidden;
 }
 
-.text-xl { /*h1 60/78*/
+.text-xxl { /*h1 60/78*/
+  font-size: var(--text-xxl);
+  line-height: var(--line-height-xxl);
+}
+
+.text-xl { /*h2 30/36*/
   font-size: var(--text-xl);
   line-height: var(--line-height-xl);
 }
 
-.text-lg { /*h2 30/36*/
+.text-lg { /*h3 24/28*/
   font-size: var(--text-lg);
   line-height: var(--line-height-lg);
 }
 
-.text-md { /*h3 24/28*/
+.text-md { /*p 22/26*/
   font-size: var(--text-md);
   line-height: var(--line-height-md);
 }
 
-.text-sm { /*p 22/26*/
+.text-sm { /*h4 20/24*/
   font-size: var(--text-sm);
   line-height: var(--line-height-sm);
-}
-
-.text-xs { /*h4 20/24*/
-  font-size: var(--text-xs);
-  line-height: var(--line-height-xs);
 }
 
 .uppercase {
@@ -169,7 +169,7 @@ img {
   &.button--large {
     padding: 8px 50px;
     font-size: var(--button-text-large);
-    line-height: var(--line-height-lg);
+    line-height: var(--line-height-xl);
   }
 
   &.button--primary {
@@ -310,6 +310,10 @@ img {
 
 .services__header-title {
   margin: 0 0 20px;
+}
+
+.services__header-description {
+  margin: 0;
 }
 
 .services__item--background-alt {
