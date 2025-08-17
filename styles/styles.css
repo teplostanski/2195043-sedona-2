@@ -158,6 +158,7 @@ img {
 
 .link {
   text-decoration: none;
+  color: inherit;
 }
 
 .button {
@@ -458,4 +459,22 @@ img {
   border-radius: 4px;
   text-transform: uppercase;
   padding: 9px 22px 8px 23px;
+}
+
+.pagination__item {
+  background-color: var(--color-blue);
+  color: var(--color-text-alt);
+  border-radius: 4px;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.pagination__item--current {
+  background-color: var(--color-gray-second-2);
+  color: var(--color-text-base);
+}
+
+.pagination__item--disabled {
+  background-color: transparent;
+  color: var(--color-text-base);
 }
