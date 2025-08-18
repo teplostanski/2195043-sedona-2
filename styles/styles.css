@@ -1,0 +1,589 @@
+:root {
+  /* Typography */
+  --text-xxl: 60px;
+  --text-xl: 30px;
+  --text-lg: 24px;
+  --text-md: 22px;
+  --text-sm: 20px;
+  --text-base: 18px;
+  --line-height-xxl: 78px;
+  --line-height-xl: 36px;
+  --line-height-lg: 28px;
+  --line-height-md: 26px;
+  --line-height-sm: 24px;
+  --line-height-base: 21px;
+
+  /* Color Bases*/
+  --color-black: #000000;
+  --color-dark-gray: #333333;
+  --color-blue: #83b3d3;
+  --color-blue-2: #68A2CA;
+  --color-blue-second: rgba(131, 179, 211, 12%);
+  --color-blue-second-2: rgba(131, 179, 211, 20%);
+  --color-white: #ffffff;
+  --color-white-second: rgba(255, 255, 255, 30%);
+  --color-red: #ff5757;
+  --color-brown: #756157;
+  --color-brown-second: #615048;
+  --color-green: #7db54f;
+  --color-green-2: #6C9E42;
+  --color-ocean: #3f5e72;
+  --color-gray: #e5e5e5;
+  --color-gray-second: #e6e6e6;
+  --color-gray-second-2: #f2f2f2;
+
+  /* Color Typography */
+  --color-text-base: var(--color-black);
+  --color-text-alt: var(--color-white);
+  --color-text-second: var(--color-dark-gray);
+
+  /* Color Button */
+  --color-button-primary: var(--color-brown);
+  --color-button-secondary: var(--color-blue);
+  --color-button-active: var(--color-green);
+  --color-button-text: var(--color-white);
+  --color-button-text-hover: var(--color-white-second);
+  --color-button-primary-hover: var(--color-brown-second);
+  --color-button-secondary-hover: var(--color-blue-2);
+  --color-button-active-hover: var(--color-green-2);
+
+  --color-focus-outline: var(--color-blue);
+
+  /* Color Badge */
+  --color-badge-bg: var(--color-green);
+  --color-badge-fg: var(--color-white);
+
+  /* Button Typography */
+  --button-text-base: 16px;
+  --button-text-large: 20px;
+  --button-line-height-base: 20px;
+  --button-line-height-large: 36px;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: local("PT Sans"), url("../fonts/ptsans-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: local("PT Sans"), url("../fonts/ptsans-700.woff2") format("woff2");
+}
+
+html {
+  background-color: var(--color-gray-second-2);
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: var(--text-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text-base);
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  min-height: 100dvh;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+.main {
+  flex: 1;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.text-xxl {
+  /*h1 60/78*/
+  font-size: var(--text-xxl);
+  line-height: var(--line-height-xxl);
+}
+
+.text-xl {
+  /*h2 30/36*/
+  font-size: var(--text-xl);
+  line-height: var(--line-height-xl);
+}
+
+.text-lg {
+  /*h3 24/28*/
+  font-size: var(--text-lg);
+  line-height: var(--line-height-lg);
+}
+
+.text-md {
+  /*p 22/26*/
+  font-size: var(--text-md);
+  line-height: var(--line-height-md);
+}
+
+.text-sm {
+  /*h4 20/24*/
+  font-size: var(--text-sm);
+  line-height: var(--line-height-sm);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.text-color-base {
+  color: var(--color-text-base);
+}
+
+.text-color-alt {
+  color: var(--color-text-alt);
+}
+
+.text-color-second {
+  color: var(--color-text-second);
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.button {
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  color: var(--color-button-text);
+  padding: 8px 34px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: var(--button-text-base);
+  line-height: var(--button-line-height-base);
+
+  &:hover {
+    color: var(--color-button-text-hover);
+  }
+
+  &:is(:focus, :focus-visible) {
+    outline: 3px solid var(--color-focus-outline);
+  }
+}
+
+.button--large {
+  padding: 8px 50px;
+  font-size: var(--button-text-large);
+  line-height: var(--line-height-xl);
+}
+
+.button--primary {
+  background: var(--color-button-primary);
+
+  &:active {
+    background-color: var(--color-button-primary-hover);
+    color: var(--color-button-text-hover);
+  }
+
+  &:is(:hover, :focus, :focus-visible) {
+    background-color: var(--color-button-primary-hover);
+    color: var(--color-button-text);
+    outline: none;
+  }
+}
+
+.button--secondary {
+  background: var(--color-button-secondary);
+
+  &:active {
+    background-color: var(--color-button-secondary-hover);
+    color: var(--color-button-text-hover);
+  }
+
+  &:is(:hover, :focus, :focus-visible) {
+    background-color: var(--color-button-secondary-hover);
+    color: var(--color-button-text);
+    outline: none;
+  }
+}
+
+.button--active {
+  background: var(--color-button-active);
+
+  &:active {
+    background-color: var(--color-button-active-hover);
+    color: var(--color-button-text-hover);
+  }
+
+  &:is(:hover, :focus, :focus-visible) {
+    background-color: var(--color-button-active-hover);
+    color: var(--color-button-text);
+    outline: none;
+  }
+}
+
+.button--link {
+  display: inline-block;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.select {
+  outline: 2px solid var(--color-gray);
+  border: none;
+  border-radius: 4px;
+  font-family: inherit;
+  line-height: inherit;
+  color: var(--color-text-second);
+  padding: 0 20px;
+  height: 49px;
+
+  &:is(:hover, :focus, :focus-visible) {
+    outline: 2px solid var(--color-focus-outline);
+  }
+}
+
+/* Header */
+.main-header {
+  height: 64px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 70px;
+}
+
+.main-header__container {
+  display: flex;
+}
+
+.logo {
+  z-index: 1;
+}
+
+.logo__image {
+  width: 140px;
+  height: 70px;
+  margin-right: 30px;
+}
+
+.nav {
+  padding: 0 16px;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 32px;
+  height: 100%;
+}
+
+.nav__item {
+  padding: 20px 0;
+
+  &.nav__item--current {
+    border: solid var(--color-brown);
+    border-width: 0 0 2px 0;
+    z-index: 1;
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.actions__item {
+  width: 20px;
+  height: 20px;
+  background: var(--color-gray);
+  margin: 0 12px;
+  position: relative;
+}
+
+.actions__item .badge {
+  position: absolute;
+  top: -11px;
+  right: -8px;
+}
+
+.badge {
+  background-color: var(--color-badge-bg);
+  border-radius: 50%;
+  font-size: 10px;
+  line-height: 10px;
+  width: 20px;
+  height: 20px;
+  color: var(--color-badge-fg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.actions__list {
+  display: flex;
+  align-items: center;
+}
+
+/* Footer */
+.subscribe--background {
+  background-color: var(--color-brown);
+  background-image: url("../images/backgrounds/subscribe-bg.jpg");
+  background-size: cover;
+}
+
+.contact-info {
+  padding: 40px 70px 30px;
+}
+
+.contacts {
+  font-style: normal;
+}
+
+.phone {
+  font-size: 40px;
+  line-height: 40px;
+  color: var(--color-text-base);
+}
+
+.social__item {
+  width: 47px;
+  height: 40px;
+  background-color: var(--color-gray);
+}
+
+/* index.html */
+/* Hero */
+.hero {
+  padding-top: 51px;
+  padding-bottom: 82px;
+  display: flex;
+  background-color: var(--color-brown);
+  background-image: url("../images/backgrounds/hero-decoration-bg.svg"),
+    url("../images/backgrounds/hero-bg.jpg");
+  background-size: 100% auto, cover;
+  background-position: center bottom, center center;
+  background-repeat: no-repeat;
+}
+
+.hero__image {
+  margin: 0 auto;
+}
+
+/* Advantages */
+.advantages__header {
+  margin: 69px auto;
+  text-align: center;
+}
+
+.advantages__header-title {
+  margin: 0 0 25px;
+}
+
+.advantages__item--primary {
+  background-color: var(--color-blue);
+}
+
+.advantages__item--default {
+  background-color: var(--color-blue-second);
+}
+
+.advantages__item--secondary {
+  background-color: var(--color-blue-second-2);
+}
+
+.services {
+  padding: 64px 0 0;
+  text-align: center;
+}
+
+.services__title {
+  margin: 0 0 20px;
+}
+
+.services__description {
+  margin: 0 0 64px;
+}
+
+.services__item--background-alt {
+  background-color: var(--color-blue-second);
+}
+
+.services__card-title {
+  margin: 0;
+}
+
+.services__card-description {
+  margin: 0;
+}
+
+.search {
+  text-align: center;
+  padding: 96px 0;
+}
+
+.search__title {
+  margin: 0 0 20px;
+}
+
+.search__description {
+  margin: 0 0 54px;
+}
+
+.subscribe {
+  text-align: center;
+  padding: 96px 0 104px;
+}
+
+.subscribe__title {
+  margin: 0 0 20px;
+}
+
+.subscribe__description {
+  margin: 0 0 54px;
+}
+
+.subscribe__form {
+  display: flex;
+  justify-content: center;
+}
+
+.subscribe__input {
+  background-color: var(--color-gray-second-2);
+  border: none;
+  border-radius: 4px 0 0 4px;
+  width: 452px;
+  height: 52px;
+  font-family: inherit;
+  padding: 0 20px;
+
+  &:hover {
+    background-color: var(--color-gray);
+  }
+
+  &:is(:focus, :focus-visible) {
+    outline: 3px solid var(--color-focus-outline);
+  }
+}
+
+.subscribe__button {
+  border-radius: 0 4px 4px 0;
+}
+
+/* catalog.html */
+.catalog {
+  background-color: var(--color-brown);
+  background-image: url("../images/backgrounds/filters-bg.jpg");
+  background-size: cover;
+  padding: 35px 70px 70px;
+}
+
+.catalog__title {
+  margin: 0;
+}
+
+.breadcrumbs__link {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.filter__group {
+  border: none;
+}
+
+.results__view-item {
+  border: 2px solid var(--color-gray);
+  border-radius: 4px;
+  width: 48px;
+  height: 48px;
+}
+
+.results__view-item--current {
+  border: 2px solid var(--color-black);
+}
+
+.hotel-card {
+  border: 1px solid var(--color-gray-second);
+  border-radius: 4px;
+}
+
+.hotel-card__link {
+  display: flex;
+  flex-direction: column;
+}
+
+.hotel-card__title {
+  order: 2;
+}
+
+.hotel-card__img {
+  order: 1;
+}
+
+.hotel-card__description {
+  margin: 0;
+}
+
+.hotel-card__stars {
+  background-color: var(--color-gray-second-2);
+  display: block;
+  width: 90px;
+  height: 17px;
+}
+
+.hotel-card__rating-amount {
+  background-color: var(--color-gray-second-2);
+  border-radius: 4px;
+  text-transform: uppercase;
+  padding: 9px 22px 8px 23px;
+}
+
+.pagination__item {
+  background-color: var(--color-blue);
+  color: var(--color-text-alt);
+  border-radius: 4px;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.pagination__item--current {
+  background-color: var(--color-gray-second-2);
+  color: var(--color-text-base);
+}
+
+.pagination__item--disabled {
+  background-color: transparent;
+  color: var(--color-text-base);
+}
+
+/* ХОВЕРЫ */
