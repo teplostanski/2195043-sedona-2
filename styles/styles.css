@@ -17,6 +17,7 @@
   --color-black: #000000;
   --color-dark-gray: #333333;
   --color-blue: #83b3d3;
+  --color-blue-2: #68A2CA;
   --color-blue-second: rgba(131, 179, 211, 12%);
   --color-blue-second-2: rgba(131, 179, 211, 20%);
   --color-white: #ffffff;
@@ -25,6 +26,7 @@
   --color-brown: #756157;
   --color-brown-second: #615048;
   --color-green: #7db54f;
+  --color-green-2: #6C9E42;
   --color-ocean: #3f5e72;
   --color-gray: #e5e5e5;
   --color-gray-second: #e6e6e6;
@@ -40,6 +42,12 @@
   --color-button-secondary: var(--color-blue);
   --color-button-active: var(--color-green);
   --color-button-text: var(--color-white);
+  --color-button-text-hover: var(--color-white-second);
+  --color-button-primary-hover: var(--color-brown-second);
+  --color-button-secondary-hover: var(--color-blue-2);
+  --color-button-active-hover: var(--color-green-2);
+
+  --color-focus-outline: var(--color-blue);
 
   /* Color Badge */
   --color-badge-bg: var(--color-green);
@@ -179,33 +187,89 @@ img {
   font-size: var(--button-text-base);
   line-height: var(--button-line-height-base);
 
-  &.button--large {
-    padding: 8px 50px;
-    font-size: var(--button-text-large);
-    line-height: var(--line-height-xl);
+  &:hover {
+    color: var(--color-button-text-hover);
   }
 
-  &.button--primary {
-    background: var(--color-button-primary);
+  &:is(:focus, :focus-visible) {
+    outline: 3px solid var(--color-focus-outline);
+  }
+}
+
+.button--large {
+  padding: 8px 50px;
+  font-size: var(--button-text-large);
+  line-height: var(--line-height-xl);
+}
+
+.button--primary {
+  background: var(--color-button-primary);
+
+  &:active {
+    background-color: var(--color-button-primary-hover);
+    color: var(--color-button-text-hover);
   }
 
-  &.button--secondary {
-    background: var(--color-button-secondary);
+  &:is(:hover, :focus, :focus-visible) {
+    background-color: var(--color-button-primary-hover);
+    color: var(--color-button-text);
+    outline: none;
+  }
+}
+
+.button--secondary {
+  background: var(--color-button-secondary);
+
+  &:active {
+    background-color: var(--color-button-secondary-hover);
+    color: var(--color-button-text-hover);
   }
 
-  &.button--active {
-    background: var(--color-button-active);
+  &:is(:hover, :focus, :focus-visible) {
+    background-color: var(--color-button-secondary-hover);
+    color: var(--color-button-text);
+    outline: none;
+  }
+}
+
+.button--active {
+  background: var(--color-button-active);
+
+  &:active {
+    background-color: var(--color-button-active-hover);
+    color: var(--color-button-text-hover);
   }
 
-  &.button--link {
-    display: inline-block;
+  &:is(:hover, :focus, :focus-visible) {
+    background-color: var(--color-button-active-hover);
+    color: var(--color-button-text);
+    outline: none;
   }
+}
+
+.button--link {
+  display: inline-block;
 }
 
 .list {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.select {
+  outline: 2px solid var(--color-gray);
+  border: none;
+  border-radius: 4px;
+  font-family: inherit;
+  line-height: inherit;
+  color: var(--color-text-second);
+  padding: 0 20px;
+  height: 49px;
+
+  &:is(:hover, :focus, :focus-visible) {
+    outline: 2px solid var(--color-focus-outline);
+  }
 }
 
 /* Header */
@@ -298,6 +362,10 @@ img {
   background-size: cover;
 }
 
+.contact-info {
+  padding: 40px 70px 30px;
+}
+
 .contacts {
   font-style: normal;
 }
@@ -306,6 +374,12 @@ img {
   font-size: 40px;
   line-height: 40px;
   color: var(--color-text-base);
+}
+
+.social__item {
+  width: 47px;
+  height: 40px;
+  background-color: var(--color-gray);
 }
 
 /* index.html */
@@ -397,6 +471,33 @@ img {
 
 .subscribe__description {
   margin: 0 0 54px;
+}
+
+.subscribe__form {
+  display: flex;
+  justify-content: center;
+}
+
+.subscribe__input {
+  background-color: var(--color-gray-second-2);
+  border: none;
+  border-radius: 4px 0 0 4px;
+  width: 452px;
+  height: 52px;
+  font-family: inherit;
+  padding: 0 20px;
+
+  &:hover {
+    background-color: var(--color-gray);
+  }
+
+  &:is(:focus, :focus-visible) {
+    outline: 3px solid var(--color-focus-outline);
+  }
+}
+
+.subscribe__button {
+  border-radius: 0 4px 4px 0;
 }
 
 /* catalog.html */

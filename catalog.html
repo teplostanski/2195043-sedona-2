@@ -233,7 +233,7 @@
             Найдено гостиниц: <span class="results__amount">38</span>
           </p>
           <select
-            class="results__sort"
+            class="select"
             aria-label="Сортировка результата поиска"
           >
             <option value="popular">Сначала популярные</option>
@@ -242,7 +242,7 @@
           </select>
           <div role="group" aria-label="Переключение вида каталога">
             <ul class="results__view-list list">
-              <li class="results__view-item  results__view-item--current">
+              <li class="results__view-item results__view-item--current">
                 <a
                   class="results__view-link"
                   href="#"
@@ -293,7 +293,9 @@
                 <span class="hotel-card__type">Гостиница</span>
                 <span class="hotel-card__price">от 4000 ₽</span>
               </p>
-              <a class="button button--primary button--link" href="#">Подробнее</a>
+              <a class="button button--primary button--link" href="#"
+                >Подробнее</a
+              >
               <button class="button button--secondary" aria-pressed="false">
                 В избранное
               </button>
@@ -320,8 +322,10 @@
                 <span class="hotel-card__type">Гостиница</span>
                 <span class="hotel-card__price">от 5000 ₽</span>
               </p>
-              <a class="button button--primary button--link" href="#">Подробнее</a>
-              <button class="button button--secondary" aria-pressed="true">
+              <a class="button button--primary button--link" href="#"
+                >Подробнее</a
+              >
+              <button class="button button--active" aria-pressed="true">
                 В избранном
               </button>
               <div class="hotel-card__rating">
@@ -347,7 +351,9 @@
                 <span class="hotel-card__type">Гостиница</span>
                 <span class="hotel-card__price">от 2500 ₽</span>
               </p>
-              <a class="button button--primary button--link" href="#">Подробнее</a>
+              <a class="button button--primary button--link" href="#"
+                >Подробнее</a
+              >
               <button class="button button--secondary" aria-pressed="false">
                 В избранное
               </button>
@@ -374,7 +380,9 @@
                 <span class="hotel-card__type">Гостиница</span>
                 <span class="hotel-card__price">от 1500 ₽</span>
               </p>
-              <a class="button button--primary button--link" href="#">Подробнее</a>
+              <a class="button button--primary button--link" href="#"
+                >Подробнее</a
+              >
               <button class="button button--secondary" aria-pressed="false">
                 В избранное
               </button>
@@ -392,10 +400,7 @@
         <div class="pagination" aria-label="Страницы результата поиска">
           <ul class="pagination__list list">
             <li class="pagination__item pagination__item--current">
-              <a
-                class="pagination__link link"
-                href="#"
-                aria-current="page"
+              <a class="pagination__link link" href="#" aria-current="page"
                 >1</a
               >
             </li>
@@ -450,42 +455,44 @@
         </form>
       </section>
 
-      <section class="social">
-        <h2 class="visually-hidden">Социальные сети</h2>
-        <ul class="social__list list">
-          <li class="social__item">
-            <a class="social__link link" href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">Вконтакте</span>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link link" href="https://t.me/htmlacademy">
-              <span class="visually-hidden">Телеграм</span>
-            </a>
-          </li>
-          <li class="social__item">
-            <a
-              class="social__link link"
-              href="https://www.youtube.com/user/htmlacademyru"
-            >
-              <span class="visually-hidden">Ютуб</span>
-            </a>
-          </li>
-        </ul>
-      </section>
+      <div class="contact-info">
+        <section class="social">
+          <h2 class="visually-hidden">Социальные сети</h2>
+          <ul class="social__list list">
+            <li class="social__item">
+              <a class="social__link link" href="https://vk.com/htmlacademy">
+                <span class="visually-hidden">Вконтакте</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link link" href="https://t.me/htmlacademy">
+                <span class="visually-hidden">Телеграм</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a
+                class="social__link link"
+                href="https://www.youtube.com/user/htmlacademyru"
+              >
+                <span class="visually-hidden">Ютуб</span>
+              </a>
+            </li>
+          </ul>
+        </section>
 
-      <address class="contacts" aria-label="Контакты">
-        <a class="phone link" href="tel:+78128121212">+7 (812) 812-12-12</a>
-      </address>
-      <a class="copyright link" href="https://htmlacademy.ru/">
-        <img
-          class="copyright__image"
-          src="./images/logos/academy-logo.svg"
-          alt="Логотип HTML Academy"
-          width="115"
-          height="33"
-        />
-      </a>
+        <address class="contacts" aria-label="Контакты">
+          <a class="phone link" href="tel:+78128121212">+7 (812) 812-12-12</a>
+        </address>
+        <a class="copyright link" href="https://htmlacademy.ru/">
+          <img
+            class="copyright__image"
+            src="./images/logos/academy-logo.svg"
+            alt="Логотип HTML Academy"
+            width="115"
+            height="33"
+          />
+        </a>
+      </div>
     </footer>
   </body>
 </html>
