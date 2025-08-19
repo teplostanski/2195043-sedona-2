@@ -383,7 +383,11 @@ body {
 }
 
 .contact-info {
-  padding: 40px 70px 30px;
+  padding: 45px 70px 30px;
+  display: flex
+;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .contacts {
@@ -394,6 +398,11 @@ body {
   font-size: 40px;
   line-height: 40px;
   color: var(--color-text-base);
+}
+
+.social__list {
+  display: flex;
+  
 }
 
 .social__item {
