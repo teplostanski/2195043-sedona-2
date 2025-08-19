@@ -17,7 +17,7 @@
   --color-black: #000000;
   --color-dark-gray: #333333;
   --color-blue: #83b3d3;
-  --color-blue-2: #68A2CA;
+  --color-blue-2: #68a2ca;
   --color-blue-second: rgba(131, 179, 211, 12%);
   --color-blue-second-2: rgba(131, 179, 211, 20%);
   --color-white: #ffffff;
@@ -26,7 +26,7 @@
   --color-brown: #756157;
   --color-brown-second: #615048;
   --color-green: #7db54f;
-  --color-green-2: #6C9E42;
+  --color-green-2: #6c9e42;
   --color-ocean: #3f5e72;
   --color-gray: #e5e5e5;
   --color-gray-second: #e6e6e6;
@@ -76,6 +76,12 @@
   src: local("PT Sans"), url("../fonts/ptsans-700.woff2") format("woff2");
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   background-color: var(--color-gray-second-2);
   box-sizing: border-box;
@@ -90,18 +96,20 @@ body {
   flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: white;
+  background-color: var(--color-white);
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
-  min-height: 100dvh;
+  min-height: 100vh;
 }
 
-figure {
-  margin: 0;
-}
+/* !!!!!!!!!!!!!!! */
+
+
 
 img {
   display: block;
 }
+
+/* !!!!!!!!!!!!!!! */
 
 .main {
   flex: 1;
@@ -272,9 +280,13 @@ img {
   }
 }
 
+.figure {
+  margin: 0;
+}
+
 /* Header */
 .main-header {
-  height: 64px;
+  min-height: 64px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -521,6 +533,10 @@ img {
   border: none;
 }
 
+.filter__title {
+  text-transform: capitalize;
+}
+
 .results__view-item {
   border: 2px solid var(--color-gray);
   border-radius: 4px;
@@ -564,8 +580,9 @@ img {
 .hotel-card__rating-amount {
   background-color: var(--color-gray-second-2);
   border-radius: 4px;
-  text-transform: uppercase;
   padding: 9px 22px 8px 23px;
+  font-size: 16px;
+line-height: 20px;
 }
 
 .pagination__item {
