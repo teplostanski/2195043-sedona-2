@@ -3,12 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="preconnect dns-prefetch" href="https://cdn.jsdelivr.net" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
-    />
     <link rel="stylesheet" href="./styles/styles.css" />
 
     <title>HTML Academy: Седона</title>
@@ -81,16 +75,16 @@
         <header class="advantages__header">
           <h2 class="visually-hidden">Преимущества</h2>
           <p class="advantages__header-title text-xl uppercase bold">
-            Седона — небольшой городок в Аризоне,<br />заслуживающий большего!
+            Седона — небольшой городок в Аризоне, заслуживающий большего!
           </p>
-          <p class="text-md">
+          <p class="text-md text-color-second">
             Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!
           </p>
         </header>
 
         <ul class="advantages__list list">
           <li class="advantages__item advantages__item--primary">
-            <figure class="advantages__item-figure">
+            <figure class="advantages__item-figure figure">
               <figcaption class="advantages__item-wrapper">
                 <h3 class="advantages__title text-color-alt text-lg uppercase">
                   Настоящий городок
@@ -113,7 +107,9 @@
 
           <li class="advantages__item advantages__item--default">
             <div class="advantages__item-wrapper">
-              <h3 class="advantages__title text-lg uppercase">
+              <h3
+                class="advantages__title advantages__title-p text-lg uppercase"
+              >
                 Небольшая площадь
               </h3>
 
@@ -146,7 +142,7 @@
           </li>
 
           <li class="advantages__item advantages__item--primary">
-            <figure class="advantages__item-figure">
+            <figure class="advantages__item-figure figure">
               <figcaption class="advantages__item-wrapper">
                 <h3 class="advantages__title text-color-alt text-lg uppercase">
                   Там есть мост дьявола
@@ -169,33 +165,35 @@
       </section>
 
       <section class="services">
-        <h2 class="visually-hidden">Услуги</h2>
-        <p class="services__title text-xl uppercase bold">
-          Приезжайте в Седону отдохнуть<br />в комфорте и уюте!
-        </p>
-        <p class="services__description text-md">
-          Опытный персонал и качественное обслуживание!
-        </p>
+        <header class="services__header">
+          <h2 class="visually-hidden">Услуги</h2>
+          <p class="services__title text-xl uppercase bold">
+            Приезжайте в Седону отдохнуть в комфорте и уюте!
+          </p>
+          <p class="services__description text-md text-color-second">
+            Опытный персонал и качественное обслуживание!
+          </p>
+        </header>
 
         <ul class="services__list list">
-          <li class="services__item services__item--background-alt">
+          <li class="services__item services__icon services__icon--house">
             <h3 class="services__card-title text-lg uppercase">Жильё</h3>
             <p class="services__card-description text-color-second">
-              Рекомендуем пожить в настоящем мотеле, всё как в кино!
+              Рекомендуем пожить<br>в настоящем мотеле,<br>всё как в кино!
             </p>
           </li>
 
-          <li class="services__item">
+          <li class="services__item services__icon services__icon--food">
             <h3 class="services__card-title text-lg uppercase">Еда</h3>
             <p class="services__card-description text-color-second">
-              Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!
+              Всегда заказывайте<br>топовый фирменный бургер,<br>вы не разочаруетесь!
             </p>
           </li>
 
-          <li class="services__item services__item--background-alt">
+          <li class="services__item services__icon services__icon--gift">
             <h3 class="services__card-title text-lg uppercase">Сувениры</h3>
             <p class="services__card-description text-color-second">
-              Не только китайского, но и настоящего местного производства!
+              Не только китайского,<br>но и настоящего местного<br>производства!
             </p>
           </li>
         </ul>
@@ -204,8 +202,8 @@
       <section class="search" data-test="search">
         <h2 class="visually-hidden">Поиск гостиницы</h2>
         <p class="search__title text-xl uppercase bold">Заинтересовались?</p>
-        <p class="search__description text-md">
-          Укажите предполагаемые даты поездки,<br />и мы покажем вам лучшие
+        <p class="search__description text-md text-color-second">
+          Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие
           предложения гостиниц в Седоне
         </p>
         <a
