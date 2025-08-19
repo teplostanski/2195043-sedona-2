@@ -183,6 +183,7 @@ body {
   text-transform: uppercase;
   border-radius: 4px;
   font-weight: 700;
+  font-family: inherit;
   font-size: var(--button-text-base);
   line-height: var(--button-line-height-base);
 
@@ -327,7 +328,7 @@ body {
   pointer-events: none;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -1px;
     left: 50%;
@@ -483,7 +484,7 @@ body {
   pointer-events: none;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -31px;
     left: 50%;
@@ -494,8 +495,6 @@ body {
     background-color: var(--color-black-a30);
   }
 }
-
-
 
 .services {
   padding: 64px 0 0;
@@ -514,12 +513,55 @@ body {
   margin: 0 0 64px;
 }
 
-.services__item--background-alt {
-  background-color: var(--color-blue-a12);
+.services__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, 400px));
+}
+
+.services__item {
+  padding: 81px 85px;
+
+  &:nth-child(odd) {
+    background-color: var(--color-blue-a12);
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 31px;
+    background-repeat: no-repeat;
+  }
+}
+
+.services__icon {
+  &::before {
+    width: 75px;
+    height: 72px;
+  }
+
+  &.services__icon--house {
+    &::before {
+      background-image: url(../images/icons/house.svg);
+    }
+  }
+
+  &.services__icon--food {
+    &::before {
+      background-image: url(../images/icons/food.svg);
+    }
+  }
+
+  &.services__icon--gift {
+    &::before {
+      background-image: url(../images/icons/gift.svg);
+    }
+  }
 }
 
 .services__card-title {
-  margin: 0;
+  margin: 0 0 30px;
 }
 
 .services__card-description {
@@ -528,7 +570,7 @@ body {
 
 .search {
   text-align: center;
-  padding: 96px 290px;
+  padding: 95px 290px 96px
 }
 
 .search__title {
@@ -541,7 +583,7 @@ body {
 
 .subscribe {
   text-align: center;
-  padding: 96px 0 104px;
+  padding: 97px 250px 104px
 }
 
 .subscribe__title {
@@ -564,6 +606,8 @@ body {
   width: 452px;
   height: 52px;
   font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
   padding: 0 20px;
 
   &:hover {
