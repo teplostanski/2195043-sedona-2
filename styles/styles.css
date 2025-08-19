@@ -467,6 +467,7 @@ body {
 
 .advantages__header {
   margin: 69px auto 90px;
+  padding: 0 260px;
   text-align: center;
 }
 
@@ -501,6 +502,10 @@ body {
   text-align: center;
 }
 
+.services__header {
+  padding: 0 345px;
+}
+
 .services__title {
   margin: 0 0 20px;
 }
@@ -523,7 +528,7 @@ body {
 
 .search {
   text-align: center;
-  padding: 96px 0;
+  padding: 96px 290px;
 }
 
 .search__title {
