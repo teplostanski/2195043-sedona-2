@@ -85,7 +85,6 @@
 
 html {
   background-color: var(--color-gray-second-2);
-  box-sizing: border-box;
 }
 
 body {
@@ -93,9 +92,20 @@ body {
   font-size: var(--text-base);
   line-height: var(--line-height-base);
   color: var(--color-text-base);
+  min-width: 1200px;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.container {
   display: flex;
   flex-direction: column;
-  max-width: 1200px;
+  width: 1200px;
   margin: 0 auto;
   background-color: var(--color-white);
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
@@ -384,8 +394,7 @@ body {
 
 .contact-info {
   padding: 45px 70px 30px;
-  display: flex
-;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -402,7 +411,6 @@ body {
 
 .social__list {
   display: flex;
-  
 }
 
 .social__item {
@@ -579,7 +587,7 @@ body {
 
 .search {
   text-align: center;
-  padding: 95px 290px 96px
+  padding: 95px 290px 96px;
 }
 
 .search__title {
@@ -592,7 +600,7 @@ body {
 
 .subscribe {
   text-align: center;
-  padding: 97px 250px 104px
+  padding: 97px 250px 104px;
 }
 
 .subscribe__title {
@@ -633,15 +641,30 @@ body {
 }
 
 /* catalog.html */
-.catalog {
+.filter {
   background-color: var(--color-brown);
   background-image: url("../images/backgrounds/filters-bg.jpg");
   background-size: cover;
   padding: 35px 70px 70px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
-.catalog__title {
-  margin: 0;
+.filter__title {
+  margin: 0 0 6px;
+}
+
+.breadcrumbs {
+  display: flex;
+  gap: 10px;
+}
+
+.breadcrumbs__item--tail {
+  width: 31px;
+  height: 21px;
+  background: var(--color-gray);
 }
 
 .breadcrumbs__link {
@@ -649,12 +672,68 @@ body {
   line-height: 21px;
 }
 
-.filter__group {
-  border: none;
+.filter__form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
 }
 
-.filter__title {
+.filter__group {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.filter__form-title {
   text-transform: capitalize;
+  margin-bottom: 32px;
+  padding: 0;
+}
+
+.filter__list {
+  /*margin-bottom: 16px;*/
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.filter__price {
+  width: 143px;
+  height: 48px;
+}
+
+.filter__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.results {
+  padding: 50px 70px 60px;
+}
+
+.results__view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 40px;
+}
+
+.results__view-title {
+  margin: 0;
+}
+
+.results__sort-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 70px;
+}
+
+.results__view-card-toggle {
+  display: flex;
 }
 
 .results__view-item {
@@ -666,6 +745,11 @@ body {
 
 .results__view-item--current {
   border: 2px solid var(--color-black);
+}
+
+.results__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
 }
 
 .hotel-card {
@@ -705,6 +789,11 @@ body {
   line-height: 20px;
 }
 
+.pagination {
+  font-weight: 700;
+  display: flex;
+}
+
 .pagination__item {
   background-color: var(--color-blue);
   color: var(--color-text-alt);
@@ -722,5 +811,3 @@ body {
   background-color: transparent;
   color: var(--color-text-base);
 }
-
-/* ХОВЕРЫ */
