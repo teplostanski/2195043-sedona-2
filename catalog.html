@@ -176,17 +176,50 @@
               </ul>
             </fieldset>
             <fieldset class="filter__group">
+              <!--<div>
+                <label for="email">Email</label>
+                <div class="input__icon input__icon_email">
+                  <input
+                    class="input"
+                    type="email"
+                    placeholder="alexander@itchief.ru"
+                    value="alexander@itchief.ru"
+                  />
+                </div>
+              </div>-->
+
               <legend class="filter__form-title text-sm bold">
                 Стоимость, ₽:
               </legend>
-              <label>
-                От
-                <input class="filter__price" type="number" name="min-price" />
-              </label>
-              <label>
+
+              <label class="visually-hidden" for="min-price"> От </label>
+              <div class="input">
+                <div class="input__end-content input-end-text-from">
+                  <input
+                    class="input__field filter__input-field filter__input-field-end-text-from"
+                    type="number"
+                    name="min-price"
+                    id="min-price"
+                  />
+                </div>
+              </div>
+
+              <label class="visually-hidden" for="max-price"> До </label>
+              <div class="input">
+                <div class="input__end-content input-end-text-to">
+                  <input
+                    class="input__field filter__input-field filter__input-field-end-text-to"
+                    type="number"
+                    name="max-price"
+                    id="max-price"
+                  />
+                </div>
+              </div>
+
+              <!--<label>
                 До
                 <input class="filter__price" type="number" name="max-price" />
-              </label>
+              </label>-->
               <div class="filter__range">
                 <input
                   class="filter__range-input"
