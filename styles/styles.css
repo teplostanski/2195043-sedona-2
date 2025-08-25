@@ -329,11 +329,97 @@ img {
     display: flex;
     align-items: center;
     bottom: 50%;
-    right: 0.625rem;
-    top: 45%;
+    right: 20px;
+    top: 50%;
     transform: translateY(-50%);
   }
 }
+
+.checkbox,
+.radio {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    opacity: 0.6
+  }
+
+  &:active {
+    opacity: 0.3
+  }
+}
+
+.checkbox__label,
+.radio__label {
+  padding-left: 16px;
+}
+
+.checkbox__input,
+.radio__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background: var(--color-white);
+  border-radius: 4px;
+  border: 1px solid transparent;
+  margin: 0;
+
+  &:is(:focus, :focus-visible) {
+    border: none;
+    outline: 3px solid var(--color-focus-outline);
+    outline-offset: 0;
+    box-shadow: none;
+  }
+}
+
+.radio__input {
+  border-radius: 50%;
+}
+
+.checkbox__input::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../images/icons/checkbox.svg");
+  background-repeat: no-repeat;
+}
+
+.radio__input::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-ocean);
+  border-radius: 50%;
+}
+
+.checkbox__input:checked::after {
+  width: 20px;
+  height: 20px;
+  background-size: 12px 12px;
+  background-position: center;
+}
+
+.radio__input:checked::after {
+  width: 10px;
+  height: 10px;
+  background-size: auto;
+  background-position: auto;
+}
+
+
 
 .figure {
   margin: 0;
@@ -728,7 +814,12 @@ img {
 .filter__form {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
+  gap: 152px;
+}
+
+.filter__groups {
+ display: flex;
+ gap: 70px;
 }
 
 .filter__group {
@@ -739,20 +830,21 @@ img {
 
 .filter__form-title {
   text-transform: capitalize;
-  margin-bottom: 32px;
+  margin-bottom: 33px;
   padding: 0;
 }
 
 .filter__list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 19px;
 }
 
 .filter__inputs {
   display: flex;
   flex-wrap: wrap;
   gap: 2px;
+  margin-bottom: 34px;
 }
 
 .filter__input-field {
@@ -789,6 +881,11 @@ img {
   flex-wrap: wrap;
   flex-direction: column;
   gap: 32px;
+  justify-content: flex-end;
+}
+
+.filter__button {
+  padding: 8px 50px;
 }
 
 .results {

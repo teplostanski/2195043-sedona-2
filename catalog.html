@@ -92,168 +92,179 @@
             <h2 class="visually-hidden" id="hotels-filter-title">
               Фильтр гостиниц
             </h2>
-            <fieldset class="filter__group">
-              <legend class="filter__form-title text-sm bold">
-                Инфраструктура:
-              </legend>
-              <ul class="filter__list list">
-                <li class="filter__item">
-                  <label class="filter__control">
+            <div class="filter__groups">
+              <fieldset class="filter__group">
+                <legend class="filter__form-title text-sm bold">
+                  Инфраструктура:
+                </legend>
+                <ul class="filter__list list">
+                  <li class="filter__item checkbox">
                     <input
-                      class="filter__input"
+                      class="filter__input checkbox__input"
                       type="checkbox"
                       name="infrastructure"
+                      id="infrastructure-pool"
                       value="pool"
                       checked
                     />
-                    Бассейн
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label class="filter__control">
+                    <label
+                      class="filter__control checkbox__label"
+                      for="infrastructure-pool"
+                    >
+                      Бассейн
+                    </label>
+                  </li>
+                  <li class="filter__item checkbox">
                     <input
-                      class="filter__input"
+                      class="filter__input checkbox__input"
                       type="checkbox"
                       name="infrastructure"
+                      id="infrastructure-parking"
                       value="parking"
                       checked
                     />
-                    Парковка
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label class="filter__control">
+                    <label
+                      class="filter__control checkbox__label"
+                      for="infrastructure-parking"
+                    >
+                      Парковка
+                    </label>
+                  </li>
+                  <li class="filter__item checkbox">
                     <input
-                      class="filter__input"
+                      class="filter__input checkbox__input"
                       type="checkbox"
                       name="infrastructure"
+                      id="infrastructure-wifi"
                       value="Wi-Fi"
                     />
-                    Wi-Fi
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="filter__group">
-              <legend class="filter__form-title text-sm bold">
-                Тип жилья:
-              </legend>
-              <ul class="filter__list list">
-                <li class="filter__item">
-                  <label class="filter__control">
+                    <label
+                      class="filter__control checkbox__label"
+                      for="infrastructure-wifi"
+                    >
+                      Wi-Fi
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="filter__group">
+                <legend class="filter__form-title text-sm bold">
+                  Тип жилья:
+                </legend>
+                <ul class="filter__list list">
+                  <li class="filter__item radio">
                     <input
-                      class="filter__input"
+                      class="filter__input radio__input"
                       type="radio"
                       name="room-type"
+                      id="room-type-hotel"
                       value="hotel"
                       checked
                     />
-                    Гостиница
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label class="filter__control">
+                    <label
+                      class="filter__control radio__label"
+                      for="room-type-hotel"
+                    >
+                      Гостиница
+                    </label>
+                  </li>
+                  <li class="filter__item radio">
                     <input
-                      class="filter__input"
+                      class="filter__input radio__input"
                       type="radio"
                       name="room-type"
+                      id="room-type-motel"
                       value="motel"
                     />
-                    Мотель
-                  </label>
-                </li>
-                <li class="filter__item">
-                  <label class="filter__control">
+                    <label
+                      class="filter__control radio__label"
+                      for="room-type-motel"
+                    >
+                      Мотель
+                    </label>
+                  </li>
+                  <li class="filter__item radio">
                     <input
-                      class="filter__input"
+                      class="filter__input radio__input"
                       type="radio"
                       name="room-type"
+                      id="room-type-apartment"
                       value="apartment"
                     />
-                    Апартаменты
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="filter__group">
-              <!--<div>
-                <label for="email">Email</label>
-                <div class="input__icon input__icon_email">
+                    <label
+                      class="filter__control radio__label"
+                      for="room-type-apartment"
+                    >
+                      Апартаменты
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+            <div class="filter__groups">
+              <fieldset class="filter__group">
+                <legend class="filter__form-title text-sm bold">
+                  Стоимость, ₽:
+                </legend>
+
+                <div class="filter__inputs">
+                  <label class="visually-hidden" for="min-price"> От </label>
+                  <div class="input">
+                    <div class="input__end-content input-end-text-from">
+                      <input
+                        class="input__field filter__input-field filter__input-field-end-text-from"
+                        type="number"
+                        name="min-price"
+                        id="min-price"
+                      />
+                    </div>
+                  </div>
+
+                  <label class="visually-hidden" for="max-price"> До </label>
+                  <div class="input">
+                    <div class="input__end-content input-end-text-to">
+                      <input
+                        class="input__field filter__input-field filter__input-field-end-text-to"
+                        type="number"
+                        name="max-price"
+                        id="max-price"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="filter__range">
                   <input
-                    class="input"
-                    type="email"
-                    placeholder="alexander@itchief.ru"
-                    value="alexander@itchief.ru"
+                    class="filter__range-input"
+                    type="range"
+                    name="min-price"
+                    min="0"
+                    max="9000"
+                    value="0"
+                  />
+                  <input
+                    class="filter__range-input"
+                    type="range"
+                    name="max-price"
+                    min="0"
+                    max="9000"
+                    value="9000"
                   />
                 </div>
-              </div>-->
-
-              <legend class="filter__form-title text-sm bold">
-                Стоимость, ₽:
-              </legend>
-
-              <div class="filter__inputs">
-                <label class="visually-hidden" for="min-price"> От </label>
-                <div class="input">
-                  <div class="input__end-content input-end-text-from">
-                    <input
-                      class="input__field filter__input-field filter__input-field-end-text-from"
-                      type="number"
-                      name="min-price"
-                      id="min-price"
-                    />
-                  </div>
-                </div>
-
-                <label class="visually-hidden" for="max-price"> До </label>
-                <div class="input">
-                  <div class="input__end-content input-end-text-to">
-                    <input
-                      class="input__field filter__input-field filter__input-field-end-text-to"
-                      type="number"
-                      name="max-price"
-                      id="max-price"
-                    />
-                  </div>
-                </div>
+              </fieldset>
+              <div class="filter__buttons">
+                <button
+                  class="filter__button filter__button--submit button button--secondary"
+                  type="submit"
+                >
+                  Применить
+                </button>
+                <button
+                  class="filter__button filter__button--reset button"
+                  type="reset"
+                >
+                  Сбросить
+                </button>
               </div>
-
-              <!--<label>
-                До
-                <input class="filter__price" type="number" name="max-price" />
-              </label>-->
-              <div class="filter__range">
-                <input
-                  class="filter__range-input"
-                  type="range"
-                  name="min-price"
-                  min="0"
-                  max="9000"
-                  value="0"
-                />
-                <input
-                  class="filter__range-input"
-                  type="range"
-                  name="max-price"
-                  min="0"
-                  max="9000"
-                  value="9000"
-                />
-              </div>
-            </fieldset>
-            <div class="filter__buttons">
-              <button
-                class="filter__button filter__button--submit button button--secondary"
-                type="submit"
-              >
-                Применить
-              </button>
-              <button
-                class="filter__button filter__button--reset button"
-                type="reset"
-              >
-                Сбросить
-              </button>
             </div>
           </form>
         </section>
