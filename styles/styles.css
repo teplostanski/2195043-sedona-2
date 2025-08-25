@@ -343,11 +343,11 @@ img {
   align-items: center;
 
   &:hover {
-    opacity: 0.6
+    opacity: 0.6;
   }
 
   &:active {
-    opacity: 0.3
+    opacity: 0.3;
   }
 }
 
@@ -418,8 +418,6 @@ img {
   background-size: auto;
   background-position: auto;
 }
-
-
 
 .figure {
   margin: 0;
@@ -817,8 +815,8 @@ img {
 }
 
 .filter__groups {
- display: flex;
- gap: 70px;
+  display: flex;
+  gap: 70px;
 }
 
 .filter__group {
@@ -861,7 +859,6 @@ img {
 }
 
 .input-end-text-from {
-
   &::before {
     content: "от";
     opacity: 30%;
@@ -929,6 +926,9 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 340px);
   gap: 20px;
+  padding-bottom: 40px;
+  border: solid var(--color-gray-second);
+  border-width: 0 0 1px;
 }
 
 .hotel-card {
@@ -956,11 +956,19 @@ img {
   margin: 0 0 16px;
 }
 
+.hotel-card__buttons {
+  display: flex;
+}
+
 .hotel-card__stars {
   background-color: var(--color-gray-second-2);
   display: block;
   width: 90px;
   height: 17px;
+}
+
+.hotel-card__rating {
+  display: flex;
 }
 
 .hotel-card__rating-amount {
@@ -974,6 +982,8 @@ img {
 .pagination {
   font-weight: 700;
   display: flex;
+  gap: 8px;
+  margin: 40px 0 0;
 }
 
 .pagination__item {
@@ -982,6 +992,11 @@ img {
   border-radius: 4px;
   font-size: 20px;
   line-height: 36px;
+  min-width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pagination__item--current {
