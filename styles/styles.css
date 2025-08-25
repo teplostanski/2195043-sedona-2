@@ -929,20 +929,24 @@ img {
 .results__cards {
   display: grid;
   grid-template-columns: repeat(3, 340px);
+  gap: 20px;
 }
 
 .hotel-card {
   border: 1px solid var(--color-gray-second);
   border-radius: 4px;
+  padding: 19px;
 }
 
 .hotel-card__link {
   display: flex;
   flex-direction: column;
+  gap: 17px;
 }
 
 .hotel-card__title {
   order: 2;
+  margin: 0 0 15px;
 }
 
 .hotel-card__img {
@@ -950,7 +954,7 @@ img {
 }
 
 .hotel-card__description {
-  margin: 0;
+  margin: 0 0 16px;
 }
 
 .hotel-card__stars {
@@ -1006,11 +1010,6 @@ img {
   bottom: 50%;
   right: 0.625rem;
   top: 50%;
-  /*transform: translateY(-50%);*/
-}
-
-.input__icon input {
-  /*padding-left: 2rem;*/
 }
 
 .input__icon_email::before {
