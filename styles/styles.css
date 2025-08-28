@@ -713,6 +713,7 @@ img {
 
   &.services__icon--gift {
     &::before {
+      height: 76px;
       background-image: url(../images/icons/gift.svg);
     }
   }
