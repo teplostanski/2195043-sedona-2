@@ -621,7 +621,7 @@ img {
 }
 
 .advantages__header {
-  padding: 69px 260px 90px;
+  padding: 69px 260px;
   text-align: center;
 }
 
@@ -630,8 +630,8 @@ img {
 }
 
 .advantages__title {
-  margin: 24px 0 61px;
-  padding: 0 25px;
+  margin: 0;
+  padding: 23px 25px 32px;
   text-wrap: balance;
   position: relative;
   pointer-events: none;
@@ -639,7 +639,7 @@ img {
   &::after {
     content: "";
     position: absolute;
-    bottom: -31px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     display: inline-block;
@@ -647,6 +647,11 @@ img {
     height: 2px;
     background-color: var(--color-black-a30);
   }
+}
+
+.advantages__description {
+  margin: 0;
+  padding-top: 30px;
 }
 
 .services {
