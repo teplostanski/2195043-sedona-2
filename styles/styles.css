@@ -747,6 +747,8 @@ img {
   &.services__icon--gift {
     &::before {
       height: 76px;
+      margin-bottom: 26px;
+
       background-image: url(../images/icons/gift.svg);
     }
   }
@@ -965,7 +967,6 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 340px);
   gap: 20px;
-  row-gap: 19px;
   padding-bottom: 40px;
   border: solid var(--color-gray-second);
   border-width: 0 0 1px;
@@ -996,7 +997,7 @@ img {
 }
 
 .hotel-card__description {
-  margin: 0;
+  margin: 0 0 -1px 0;
   display: flex;
   justify-content: space-between;
   text-transform: capitalize;
@@ -1038,7 +1039,7 @@ img {
   font-weight: 700;
   display: flex;
   gap: 8px;
-  margin: 40px 0 0;
+  margin: 39px 0 0;
 }
 
 .pagination__item {
