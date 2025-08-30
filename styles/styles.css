@@ -269,17 +269,48 @@ img {
 }
 
 .select {
+  position: relative;
+  width: fit-content;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 12px;
+    height: 8px;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url(../images/icons/arrow.svg);
+    background-size: cover;
+  }
+
+  &:has(.select__field:disabled)::before {
+    opacity: 0.3;
+  }
+}
+
+.select__field {
   outline: 2px solid var(--color-gray);
   border: none;
   border-radius: 4px;
-  font-family: inherit;
+  background-color: transparent;
+  font: inherit;
   line-height: inherit;
   color: var(--color-text-second);
-  padding: 0 20px;
-  height: 49px;
+  padding: 0 52px 0 20px;
+  min-width: 288px;
+  height: 45px;
+  appearance: none;
 
   &:is(:hover, :focus, :focus-visible) {
     outline: 2px solid var(--color-focus-outline);
+  }
+
+  &:disabled {
+    color: var(--color-black-a30);
+    outline: 2px solid var(--color-black-a30);
   }
 }
 
@@ -945,11 +976,12 @@ img {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 70px;
+  gap: 72px;
 }
 
 .results__view-card-toggle {
   display: flex;
+  gap: 8px;
 }
 
 .results__view-item {

@@ -281,11 +281,20 @@
               Найдено гостиниц: <span class="results__amount">38</span>
             </p>
             <div class="results__sort-wrapper">
-              <select class="select" aria-label="Сортировка результата поиска">
-                <option value="popular">Сначала популярные</option>
-                <option value="cheap" selected>Сначала дешевые</option>
-                <option value="expensive">Сначала дорогие</option>
-              </select>
+              <div class="select">
+                <label class="visually-hidden" for="sort-select"
+                  >Сортировка результата поиска</label
+                >
+                  <select
+                    class="select__field"
+                    aria-label="Сортировка результата поиска"
+                    id="sort-select"
+                  >
+                    <option value="popular">Сначала популярные</option>
+                    <option value="cheap" selected>Сначала дешевые</option>
+                    <option value="expensive">Сначала дорогие</option>
+                  </select>
+              </div>
               <ul
                 class="results__view-card-toggle list"
                 role="group"
@@ -342,10 +351,15 @@
                 <span class="hotel-card__price">от 4000 ₽</span>
               </p>
               <div class="hotel-card__buttons">
-                <a class="hotel-card__button button button--primary button--link" href="#"
+                <a
+                  class="hotel-card__button button button--primary button--link"
+                  href="#"
                   >Подробнее</a
                 >
-                <button class="hotel-card__button button button--secondary" aria-pressed="false">
+                <button
+                  class="hotel-card__button button button--secondary"
+                  aria-pressed="false"
+                >
                   В избранное
                 </button>
               </div>
@@ -376,10 +390,15 @@
                 <span class="hotel-card__price">от 5000 ₽</span>
               </p>
               <div class="hotel-card__buttons">
-                <a class="hotel-card__button button button--primary button--link" href="#"
+                <a
+                  class="hotel-card__button button button--primary button--link"
+                  href="#"
                   >Подробнее</a
                 >
-                <button class="hotel-card__button button button--active" aria-pressed="true">
+                <button
+                  class="hotel-card__button button button--active"
+                  aria-pressed="true"
+                >
                   В избранном
                 </button>
               </div>
@@ -411,10 +430,15 @@
                 <span class="hotel-card__price">от 2500 ₽</span>
               </p>
               <div class="hotel-card__buttons">
-                <a class="hotel-card__button button button--primary button--link" href="#"
+                <a
+                  class="hotel-card__button button button--primary button--link"
+                  href="#"
                   >Подробнее</a
                 >
-                <button class="hotel-card__button button button--secondary" aria-pressed="false">
+                <button
+                  class="hotel-card__button button button--secondary"
+                  aria-pressed="false"
+                >
                   В избранное
                 </button>
               </div>
@@ -446,10 +470,15 @@
                 <span class="hotel-card__price">от 1500 ₽</span>
               </p>
               <div class="hotel-card__buttons">
-                <a class="hotel-card__button button button--primary button--link" href="#"
+                <a
+                  class="hotel-card__button button button--primary button--link"
+                  href="#"
                   >Подробнее</a
                 >
-                <button class="hotel-card__button button button--secondary" aria-pressed="false">
+                <button
+                  class="hotel-card__button button button--secondary"
+                  aria-pressed="false"
+                >
                   В избранное
                 </button>
               </div>
@@ -469,7 +498,10 @@
 
           <ul class="pagination list" aria-label="Страницы результата поиска">
             <li>
-              <a class="pagination__item pagination__item--current link" href="#" aria-current="page"
+              <a
+                class="pagination__item pagination__item--current link"
+                href="#"
+                aria-current="page"
                 >1</a
               >
             </li>
@@ -483,7 +515,11 @@
               <a class="pagination__item link" href="#">4</a>
             </li>
             <li>
-              <a class="pagination__item pagination__item--disabled link" href="#">...</a>
+              <a
+                class="pagination__item pagination__item--disabled link"
+                href="#"
+                >...</a
+              >
             </li>
             <li>
               <a class="pagination__item link" href="#">10</a>
