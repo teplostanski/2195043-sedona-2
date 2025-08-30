@@ -1050,14 +1050,25 @@ img {
   line-height: 36px;
   min-width: 60px;
   height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  padding: 12px;
+  text-align: center;
+  cursor: default;
+
+  &:is(:hover, :focus, :focus-visible):not(.pagination__item--current, .pagination__item--disabled) {
+    background-color: var(--color-blue-2);
+    cursor: pointer;
+  }
+
+  &:active:not(.pagination__item--current, .pagination__item--disabled) {
+    color: var(--color-white-a30);
+  }
 }
 
 .pagination__item--current {
   background-color: var(--color-gray-second-2);
   color: var(--color-text-base);
+
 }
 
 .pagination__item--disabled {
