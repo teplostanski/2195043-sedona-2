@@ -45,14 +45,18 @@
         <div class="actions">
           <ul class="actions__list list">
             <li class="actions__item">
-              <a class="link" href="#">
-                <span class="visually-hidden">Поиск</span>
+              <a class="actions__link link" href="#">
+                <div class="actions__icon actions__icon--search">
+                  <span class="visually-hidden">Поиск</span>
+                </div>
               </a>
             </li>
             <li class="actions__item">
-              <a class="link" href="#">
-                <span class="visually-hidden">Избранное</span>
-                <span class="badge" data-badge="favorites">12</span>
+              <a class="actions__link link" href="#">
+                <div class="actions__icon actions__icon--favorites">
+                  <span class="visually-hidden">Избранное</span>
+                  <span class="badge" data-badge="favorites">12</span>
+                </div>
               </a>
             </li>
           </ul>
@@ -216,6 +220,9 @@
                         type="number"
                         name="min-price"
                         id="min-price"
+                        min="0"
+                        max="9000"
+                        value="0"
                       />
                     </div>
                   </div>
@@ -228,29 +235,46 @@
                         type="number"
                         name="max-price"
                         id="max-price"
+                        min="0"
+                        max="9000"
+                        value="9000"
                       />
                     </div>
                   </div>
                 </div>
-                <div class="filter__range">
-                  <input
-                    class="filter__range-input"
-                    type="range"
-                    name="min-price"
-                    min="0"
-                    max="9000"
-                    value="0"
-                  />
-                  <input
-                    class="filter__range-input"
-                    type="range"
-                    name="max-price"
-                    min="0"
-                    max="9000"
-                    value="9000"
-                  />
+                <div class="range-slider">
+                  <div class="range-slider__track"></div>
+                  <div class="range-slider__progress"></div>
+                  <div class="range-slider__thumbs">
+                    <input
+                      class="range-slider__input"
+                      id="range-min-value"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="0"
+                      step="1"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-orientation="horizontal"
+                    />
+
+                    <input
+                      class="range-slider__input"
+                      id="range-max-value"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="77"
+                      step="1"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-orientation="horizontal"
+                    />
+                  </div>
                 </div>
               </fieldset>
+
               <div class="filter__buttons">
                 <button
                   class="filter__button filter__button--submit button button--secondary"
@@ -277,11 +301,20 @@
               Найдено гостиниц: <span class="results__amount">38</span>
             </p>
             <div class="results__sort-wrapper">
-              <select class="select" aria-label="Сортировка результата поиска">
-                <option value="popular">Сначала популярные</option>
-                <option value="cheap" selected>Сначала дешевые</option>
-                <option value="expensive">Сначала дорогие</option>
-              </select>
+              <div class="select">
+                <label class="visually-hidden" for="sort-select"
+                  >Сортировка результата поиска</label
+                >
+                <select
+                  class="select__field"
+                  aria-label="Сортировка результата поиска"
+                  id="sort-select"
+                >
+                  <option value="popular">Сначала популярные</option>
+                  <option value="cheap" selected>Сначала дешевые</option>
+                  <option value="expensive">Сначала дорогие</option>
+                </select>
+              </div>
               <ul
                 class="results__view-card-toggle list"
                 role="group"
@@ -338,10 +371,15 @@
                 <span class="hotel-card__price">от 4000 ₽</span>
               </p>
               <div class="hotel-card__buttons">
-                <a class="button button--primary button--link" href="#"
+                <a
+                  class="hotel-card__button button button--primary button--link"
+                  href="#"
                   >Подробнее</a
                 >
-                <button class="button button--secondary" aria-pressed="false">
+                <button
+                  class="hotel-card__button button button--secondary"
+                  aria-pressed="false"
+                >
                   В избранное
                 </button>
               </div>
@@ -372,10 +410,15 @@
                 <span class="hotel-card__price">от 5000 ₽</span>
               </p>
               <div class="hotel-card__buttons">
-                <a class="button button--primary button--link" href="#"
+                <a
+                  class="hotel-card__button button button--primary button--link"
+                  href="#"
                   >Подробнее</a
                 >
-                <button class="button button--active" aria-pressed="true">
+                <button
+                  class="hotel-card__button button button--active"
+                  aria-pressed="true"
+                >
                   В избранном
                 </button>
               </div>
@@ -407,10 +450,15 @@
                 <span class="hotel-card__price">от 2500 ₽</span>
               </p>
               <div class="hotel-card__buttons">
-                <a class="button button--primary button--link" href="#"
+                <a
+                  class="hotel-card__button button button--primary button--link"
+                  href="#"
                   >Подробнее</a
                 >
-                <button class="button button--secondary" aria-pressed="false">
+                <button
+                  class="hotel-card__button button button--secondary"
+                  aria-pressed="false"
+                >
                   В избранное
                 </button>
               </div>
@@ -442,10 +490,15 @@
                 <span class="hotel-card__price">от 1500 ₽</span>
               </p>
               <div class="hotel-card__buttons">
-                <a class="button button--primary button--link" href="#"
+                <a
+                  class="hotel-card__button button button--primary button--link"
+                  href="#"
                   >Подробнее</a
                 >
-                <button class="button button--secondary" aria-pressed="false">
+                <button
+                  class="hotel-card__button button button--secondary"
+                  aria-pressed="false"
+                >
                   В избранное
                 </button>
               </div>
@@ -464,25 +517,32 @@
           </ul>
 
           <ul class="pagination list" aria-label="Страницы результата поиска">
-            <li class="pagination__item pagination__item--current">
-              <a class="pagination__link link" href="#" aria-current="page"
+            <li>
+              <a
+                class="pagination__item pagination__item--current link"
+                href="#"
+                aria-current="page"
                 >1</a
               >
             </li>
-            <li class="pagination__item">
-              <a class="pagination__link link" href="#">2</a>
+            <li>
+              <a class="pagination__item link" href="#">2</a>
             </li>
-            <li class="pagination__item">
-              <a class="pagination__link link" href="#">3</a>
+            <li>
+              <a class="pagination__item link" href="#">3</a>
             </li>
-            <li class="pagination__item">
-              <a class="pagination__link link" href="#">4</a>
+            <li>
+              <a class="pagination__item link" href="#">4</a>
             </li>
-            <li class="pagination__item pagination__item--disabled">
-              <a class="pagination__link link" href="#">...</a>
+            <li>
+              <a
+                class="pagination__item pagination__item--disabled link"
+                href="#"
+                >...</a
+              >
             </li>
-            <li class="pagination__item">
-              <a class="pagination__link link" href="#">10</a>
+            <li>
+              <a class="pagination__item link" href="#">10</a>
             </li>
           </ul>
         </section>
