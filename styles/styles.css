@@ -15,7 +15,9 @@
 
   /* Color Bases*/
   --color-black: #000000;
+  --color-black-a25: rgba(0, 0, 0, 25%);
   --color-black-a30: rgba(0, 0, 0, 30%);
+  --color-black-a40: rgba(0, 0, 0, 40%);
   --color-dark-gray: #333333;
   --color-blue: #83b3d3;
   --color-blue-2: #68a2ca;
@@ -455,6 +457,110 @@ img {
   margin: 0;
 }
 
+.range-slider {
+  --range-track-top: 12px;
+  --min-thumb-percent: 0;
+  --max-thumb-percent: 77;
+  --range-progress-w: calc(
+    (var(--max-thumb-percent) - var(--min-thumb-percent)) * 1%
+  );
+  --range-progress-left: calc(var(--min-thumb-percent) * 1%);
+
+  position: relative;
+  display: grid;
+  width: auto;
+}
+
+.range-slider__thumbs {
+  display: grid;
+}
+
+.range-slider__input {
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  grid-area: 1 / 1;
+  border-radius: 10px;
+  appearance: none;
+  background: none;
+  pointer-events: none;
+  z-index: 2;
+
+  &::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-white);
+    transition: 300ms;
+    pointer-events: auto;
+    cursor: pointer;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-white);
+    transition: 300ms;
+    pointer-events: auto;
+    cursor: pointer;
+  }
+
+  &:hover::-webkit-slider-thumb {
+    box-shadow: 0 4px 10px 0 var(--color-black-a25);
+  }
+
+  &:hover::-moz-range-thumb {
+    box-shadow: 0 4px 10px 0 var(--color-black-a25);
+  }
+
+  &:focus-visible::-webkit-slider-thumb {
+    outline: 3px solid var(--color-focus-outline);
+    box-shadow: 0 4px 10px 0 var(--color-black-a25);
+  }
+
+  &:focus-visible::-moz-range-thumb {
+    outline: 3px solid var(--color-focus-outline);
+    box-shadow: 0 4px 10px 0 var(--color-black-a25);
+  }
+
+  &:active::-webkit-slider-thumb {
+    outline: 2px solid var(--color-focus-outline);
+    box-shadow: 0 7px 15px 0 var(--color-black-a40);
+  }
+
+  &:active::-moz-range-thumb {
+    outline: 2px solid var(--color-focus-outline);
+    box-shadow: 0 7px 15px 0 var(--color-black-a40);
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.range-slider__track {
+  position: absolute;
+  top: var(--range-track-top);
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-white-a30);
+  z-index: 1;
+}
+
+.range-slider__progress {
+  position: absolute;
+  top: var(--range-track-top);
+  left: var(--range-progress-left);
+  width: var(--range-progress-w);
+  height: 4px;
+  background-color: var(--color-white);
+  z-index: 1;
+}
+
 /* Header */
 .main-header {
   min-height: 64px;
@@ -853,8 +959,7 @@ img {
   background-color: var(--color-brown);
   background-image: url("../images/backgrounds/filters-bg.jpg");
   background-size: cover;
-  padding: 35px 70px 70px;
-
+  padding: 35px 70px 64px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -906,14 +1011,14 @@ img {
 .filter__list {
   display: flex;
   flex-direction: column;
-  gap: 19px;
+  gap: 18px;
 }
 
 .filter__inputs {
   display: flex;
   flex-wrap: wrap;
   gap: 2px;
-  margin-bottom: 34px;
+  margin-bottom: 32px;
 }
 
 .filter__input-field {
@@ -950,6 +1055,7 @@ img {
   flex-direction: column;
   gap: 32px;
   justify-content: flex-end;
+  margin-bottom: 6px;
 }
 
 .filter__button {
@@ -965,7 +1071,7 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 0 0 40px;
+  margin: 0 0 41px;
 }
 
 .results__view-title {
@@ -1087,7 +1193,10 @@ img {
   text-align: center;
   cursor: default;
 
-  &:is(:hover, :focus, :focus-visible):not(.pagination__item--current, .pagination__item--disabled) {
+  &:is(:hover, :focus, :focus-visible):not(
+      .pagination__item--current,
+      .pagination__item--disabled
+    ) {
     background-color: var(--color-blue-2);
     cursor: pointer;
   }
@@ -1100,7 +1209,6 @@ img {
 .pagination__item--current {
   background-color: var(--color-gray-second-2);
   color: var(--color-text-base);
-
 }
 
 .pagination__item--disabled {

@@ -220,6 +220,9 @@
                         type="number"
                         name="min-price"
                         id="min-price"
+                        min="0"
+                        max="9000"
+                        value="0"
                       />
                     </div>
                   </div>
@@ -232,29 +235,46 @@
                         type="number"
                         name="max-price"
                         id="max-price"
+                        min="0"
+                        max="9000"
+                        value="9000"
                       />
                     </div>
                   </div>
                 </div>
-                <div class="filter__range">
-                  <input
-                    class="filter__range-input"
-                    type="range"
-                    name="min-price"
-                    min="0"
-                    max="9000"
-                    value="0"
-                  />
-                  <input
-                    class="filter__range-input"
-                    type="range"
-                    name="max-price"
-                    min="0"
-                    max="9000"
-                    value="9000"
-                  />
+                <div class="range-slider">
+                  <div class="range-slider__track"></div>
+                  <div class="range-slider__progress"></div>
+                  <div class="range-slider__thumbs">
+                    <input
+                      class="range-slider__input"
+                      id="range-min-value"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="0"
+                      step="1"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-orientation="horizontal"
+                    />
+
+                    <input
+                      class="range-slider__input"
+                      id="range-max-value"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="77"
+                      step="1"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-orientation="horizontal"
+                    />
+                  </div>
                 </div>
               </fieldset>
+
               <div class="filter__buttons">
                 <button
                   class="filter__button filter__button--submit button button--secondary"
@@ -285,15 +305,15 @@
                 <label class="visually-hidden" for="sort-select"
                   >Сортировка результата поиска</label
                 >
-                  <select
-                    class="select__field"
-                    aria-label="Сортировка результата поиска"
-                    id="sort-select"
-                  >
-                    <option value="popular">Сначала популярные</option>
-                    <option value="cheap" selected>Сначала дешевые</option>
-                    <option value="expensive">Сначала дорогие</option>
-                  </select>
+                <select
+                  class="select__field"
+                  aria-label="Сортировка результата поиска"
+                  id="sort-select"
+                >
+                  <option value="popular">Сначала популярные</option>
+                  <option value="cheap" selected>Сначала дешевые</option>
+                  <option value="expensive">Сначала дорогие</option>
+                </select>
               </div>
               <ul
                 class="results__view-card-toggle list"
