@@ -184,6 +184,10 @@ img {
 .link {
   text-decoration: none;
   color: inherit;
+
+  &:focus-visible {
+    outline-color: currentColor;
+  }
 }
 
 .button {
@@ -226,7 +230,7 @@ img {
   &:is(:hover, :focus, :focus-visible) {
     background-color: var(--color-button-primary-hover);
     color: var(--color-button-text);
-    outline: none;
+    outline-color: var(--color-button-primary-hover);
   }
 }
 
@@ -241,7 +245,7 @@ img {
   &:is(:hover, :focus, :focus-visible) {
     background-color: var(--color-button-secondary-hover);
     color: var(--color-button-text);
-    outline: none;
+    outline-color: var(--color-button-secondary-hover);
   }
 }
 
@@ -256,7 +260,7 @@ img {
   &:is(:hover, :focus, :focus-visible) {
     background-color: var(--color-button-active-hover);
     color: var(--color-button-text);
-    outline: none;
+    outline-color: var(--color-button-active-hover);
   }
 }
 
@@ -606,6 +610,16 @@ img {
   &:last-child {
     margin: 0;
   }
+
+  &:is(:hover, :focus, :focus-visible) {
+    color: var(--color-brown);
+    outline-color: var(--color-brown);
+  }
+
+  &:active {
+    color: var(--color-brown);
+    opacity: 0.3;
+  }
 }
 
 .nav__item--current {
@@ -646,9 +660,19 @@ img {
   display: flex;
   height: inherit;
   align-items: center;
+
+  &:is(:hover, :focus, :focus-visible) {
+    color: var(--color-brown);
+    outline-color: var(--color-brown);
+  }
+
+  &:active {
+    color: var(--color-brown);
+    opacity: 0.3;
+  }
 }
 
-.actions__icon {
+/*.actions__icon {
   width: 19px;
   height: 19px;
   margin: 0 12px;
@@ -663,9 +687,19 @@ img {
     background-position: center;
     background-size: contain;
   }
-}
 
-.actions__icon--search {
+  &:is(:hover, :focus, :focus-visible) {
+    color: var(--color-brown);
+    outline-color: var(--color-brown);
+  }
+
+  &:active {
+    color: var(--color-brown);
+    opacity: 0.3;
+  }
+}*/
+
+/*.actions__icon--search {
   &::before {
     background-image: url(../images/icons/search.svg);
   }
@@ -675,7 +709,7 @@ img {
   &::before {
     background-image: url(../images/icons/favorite.svg);
   }
-}
+}*/
 
 .actions__icon .badge {
   position: absolute;
@@ -713,7 +747,16 @@ img {
 .phone {
   font-size: 40px;
   line-height: 40px;
-  color: var(--color-text-base);
+
+  &:is(:hover, :focus, :focus-visible) {
+    color: var(--color-brown);
+    outline-color: var(--color-brown);
+  }
+
+  &:active {
+    color: var(--color-brown);
+    opacity: 0.3;
+  }
 }
 
 .social__list {
@@ -724,6 +767,18 @@ img {
   width: 47px;
   height: 40px;
   background-color: var(--color-gray);
+}
+
+.copyright {
+  &:is(:hover, :focus, :focus-visible) {
+    color: var(--color-brown);
+    outline-color: var(--color-brown);
+  }
+
+  &:active {
+    color: var(--color-brown);
+    opacity: 0.3;
+  }
 }
 
 /* index.html */
