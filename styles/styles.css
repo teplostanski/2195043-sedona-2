@@ -715,7 +715,7 @@ img {
 
   &:is(:hover, :focus, :focus-visible) {
     color: var(--color-brown);
-    outline-color: var(--color-brown);
+    outline-color: currentColor;
   }
 
   &:active {
@@ -726,22 +726,34 @@ img {
 
 .social__list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .social__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 47px;
   height: 40px;
-  background-color: var(--color-gray);
-}
+  color: var(--color-blue);
 
-.copyright {
-  &:is(:hover, :focus, :focus-visible) {
-    color: var(--color-brown);
-    outline-color: var(--color-brown);
+    &:is(:hover, :focus, :focus-visible, :active) {
+    color: var(--color-blue-2);
+    outline-color: currentColor;
   }
 
   &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright {
+  &:is(:hover, :focus, :focus-visible, :active) {
     color: var(--color-brown);
+    outline-color: currentColor;
+  }
+
+  &:active {
     opacity: 0.3;
   }
 }
@@ -1045,7 +1057,7 @@ img {
   width: 143px;
   height: 48px;
   padding: 0 35px 0 20px;
-  -moz-appearance: textfield; 
+  -moz-appearance: textfield;
 }
 
 .filter__input-field-end-text-from {
