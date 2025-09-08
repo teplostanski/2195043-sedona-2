@@ -572,7 +572,6 @@ img {
   min-height: 64px;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 70px;
 }
@@ -643,8 +642,8 @@ img {
 }
 
 .actions {
+  flex-shrink: 0;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   gap: 20px;
 }
@@ -1023,7 +1022,6 @@ img {
 
 .filter__form {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .filter__groups {
@@ -1097,8 +1095,7 @@ img {
   flex-wrap: wrap;
   flex-direction: column;
   gap: 32px;
-  justify-content: flex-end;
-  margin-bottom: 6px;
+  margin-top: 57px;
 }
 
 .filter__button {
