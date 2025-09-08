@@ -1249,7 +1249,7 @@ img {
   font-weight: 700;
   display: flex;
   gap: 8px;
-  margin: 39px 0 0;
+  margin: 38px 0 0;
 }
 
 .pagination__item {
@@ -1262,7 +1262,7 @@ img {
   min-width: 60px;
   height: 60px;
   display: block;
-  padding: 12px;
+  padding: 10px;
   text-align: center;
   cursor: default;
 
