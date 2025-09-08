@@ -1187,7 +1187,7 @@ img {
 .results__cards {
   display: grid;
   grid-template-columns: repeat(3, 340px);
-  gap: 20px;
+  gap: 19px 20px;
   padding-bottom: 40px;
   border: solid var(--color-gray-second);
   border-width: 0 0 1px;
@@ -1197,15 +1197,18 @@ img {
   border: 1px solid var(--color-gray-second);
   border-radius: 4px;
   padding: 19px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  grid-template-rows: repeat(4, min-content);
+  align-items: center;
+  gap: 16px 20px;
 }
 
 .hotel-card__link {
   display: flex;
   flex-direction: column;
   gap: 17px;
+  grid-column: span 2;
 }
 
 .hotel-card__title {
@@ -1217,18 +1220,8 @@ img {
   order: 1;
 }
 
-.hotel-card__description {
-  margin: 0 0 -1px 0;
-  display: flex;
-  justify-content: space-between;
-  text-transform: capitalize;
-}
-
-.hotel-card__buttons {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 20px;
+.hotel-card__price {
+  text-align: end;
 }
 
 .hotel-card__button {
@@ -1241,12 +1234,6 @@ img {
   display: block;
   width: 90px;
   height: 17px;
-}
-
-.hotel-card__rating {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .hotel-card__rating-amount {
