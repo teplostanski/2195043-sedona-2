@@ -997,7 +997,7 @@ img {
   padding: 35px 70px 64px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 38px;
 }
 
 .filter__title {
@@ -1007,17 +1007,37 @@ img {
 .breadcrumbs {
   display: flex;
   gap: 10px;
-}
+  line-height: 24px;
 
-.breadcrumbs__item--tail {
-  width: 31px;
-  height: 21px;
-  background: var(--color-gray);
+  :not(:last-of-type)::after {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 11px;
+    background-image: url(../images/icons/arrow-right-light.svg);
+    background-repeat: no-repeat;
+  }
+
+  :not(:last-of-type) .breadcrumbs__link {
+    margin-right: 7px;
+  }
 }
 
 .breadcrumbs__link {
   font-size: 16px;
   line-height: 21px;
+
+  &:hover:not(.breadcrumbs__link--active) {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.breadcrumbs__link--active {
+  cursor: default;
 }
 
 .filter__form {
