@@ -1184,6 +1184,7 @@ img {
 
 .results__view-item--current {
   border: 2px solid var(--color-black);
+  cursor: default;
 }
 
 .results__view-item--mode-card {
