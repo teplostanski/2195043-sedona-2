@@ -1171,7 +1171,7 @@ img {
     transform: translate(-50%, -50%);
   }
 
-  &:is(:hover, :active) {
+  &:is(:hover, :active):not(.results__view-item--current) {
     border: 2px solid var(--color-black);
     outline-color: transparent;
   }
