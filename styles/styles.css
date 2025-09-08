@@ -407,6 +407,7 @@ img {
   border-radius: 4px;
   border: 1px solid transparent;
   margin: 0;
+  flex-shrink: 0;
 
   &:is(:focus, :focus-visible) {
     border: none;
@@ -585,6 +586,7 @@ img {
   position: relative;
   width: 140px;
   margin-right: 29px;
+  flex-shrink: 0;
 }
 
 .logo__image {
@@ -737,7 +739,7 @@ img {
   height: 40px;
   color: var(--color-blue);
 
-    &:is(:hover, :focus, :focus-visible, :active) {
+  &:is(:hover, :focus, :focus-visible, :active) {
     color: var(--color-blue-2);
     outline-color: currentColor;
   }
@@ -748,6 +750,8 @@ img {
 }
 
 .copyright {
+  flex-shrink: 0;
+
   &:is(:hover, :focus, :focus-visible, :active) {
     color: var(--color-brown);
     outline-color: currentColor;
@@ -1020,12 +1024,19 @@ img {
 .filter__form {
   display: flex;
   flex-wrap: wrap;
-  gap: 152px;
 }
 
 .filter__groups {
   display: flex;
   gap: 70px;
+
+  &:first-of-type {
+    margin-right: auto;
+  }
+
+  &:last-of-type {
+    margin-left: 50px;
+  }
 }
 
 .filter__group {
@@ -1048,7 +1059,6 @@ img {
 
 .filter__inputs {
   display: flex;
-  flex-wrap: wrap;
   gap: 2px;
   margin-bottom: 32px;
 }
@@ -1144,7 +1154,7 @@ img {
     transform: translate(-50%, -50%);
   }
 
-    &:is(:hover, :active) {
+  &:is(:hover, :active) {
     border: 2px solid var(--color-black);
     outline-color: transparent;
   }
@@ -1221,6 +1231,7 @@ img {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .hotel-card__button {
@@ -1247,6 +1258,7 @@ img {
   padding: 9px 22px 8px 23px;
   font-size: 16px;
   line-height: 20px;
+  max-width: 140px;
 }
 
 .pagination {
