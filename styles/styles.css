@@ -1359,9 +1359,7 @@ img {
   background-position: center;
 }
 
-/*.modal {
-  display: flex;
-  flex-direction: column;
+.modal {
   border: none;
   border-radius: 30px;
   padding: 64px 70px;
@@ -1371,33 +1369,6 @@ img {
     background-color: var(--color-gray-second-2);
     opacity: 0.8;
   }
-}*/
-
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1;
-  background-color: var(--color-modal-backdrop);
-}
-
-.modal--close {
-  display: none;
-}
-
-.modal__window {
-  position: absolute;
-  padding: 64px 70px;
-  background-color: var(--color-white);
-  border-radius: 30px;
-  box-shadow: 0 25px 50px 0 var(--color-black-a15);
-  overflow-y: auto;
-  max-height: 100vh;
 }
 
 .modal__close-button {
