@@ -314,7 +314,7 @@ img {
   line-height: inherit;
   color: var(--color-text-second);
   padding: 0 52px 0 20px;
-  min-width: 288px;
+  width: 288px;
   height: 45px;
   appearance: none;
 
@@ -682,8 +682,8 @@ img {
 
 .actions__link .badge {
   position: absolute;
-  top: 10px;
-  right: 3px;
+  top: calc(50% - 21px);
+  left: 42%;
 }
 
 .badge {
@@ -693,6 +693,14 @@ img {
   line-height: 10px;
   padding: 5px 5px;
   color: var(--color-badge-fg);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 40px;
+}
+
+.actions__button {
+  max-width: 300px;
 }
 
 /* Footer */
@@ -750,6 +758,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 
 .contacts {
@@ -772,8 +781,8 @@ img {
 }
 
 .social__list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .social__item {
@@ -1187,7 +1196,6 @@ img {
 
 .results__view {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin: 0 0 41px;
@@ -1199,9 +1207,9 @@ img {
 
 .results__sort-wrapper {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   gap: 72px;
+  margin-left: 40px;
 }
 
 .results__view-card-toggle {
@@ -1279,9 +1287,13 @@ img {
   padding: 19px;
   display: grid;
   grid-template-columns: repeat(2, 140px);
-  grid-template-rows: repeat(4, min-content);
+  grid-template-rows: min-content 1fr;
   align-items: center;
   gap: 16px 20px;
+
+  & > span {
+    align-self: end;
+  }
 }
 
 .hotel-card__link {
@@ -1292,12 +1304,10 @@ img {
 }
 
 .hotel-card__title {
-  order: 2;
   margin: 0;
-}
-
-.hotel-card__img {
-  order: 1;
+  grid-column: 1 / -1;
+  grid-row: 2;
+  align-self: start;
 }
 
 .hotel-card__price {
@@ -1327,7 +1337,7 @@ img {
   }
 
   &[data-number-of-stars="2"] {
-    width:42px;
+    width: 42px;
   }
 
   &[data-number-of-stars="1"] {
@@ -1496,6 +1506,7 @@ img {
 .modal__input-numbers {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
 }
 
 .modal__input {
@@ -1513,7 +1524,6 @@ img {
 
 .modal__input--number {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   gap: 46px;
 }
@@ -1534,6 +1544,7 @@ img {
   max-width: 110px;
   text-align: center;
   border-radius: 4px;
+  min-width: 100px;
   -moz-appearance: textfield;
 }
 
@@ -1586,10 +1597,12 @@ img {
 .modal__tooltip {
   display: flex;
   gap: 10px;
+  align-items: center;
 }
 
 .modal__tooltip-button {
   position: relative;
+  flex-shrink: 0;
 }
 
 @media (hover: hover) {
