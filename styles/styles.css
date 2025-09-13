@@ -609,16 +609,12 @@ img {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  gap: 32px;
 }
 
 .nav__item {
-  position: relative;
+  display: block;
   padding: 20px 0;
-  margin-right: 32px;
-
-  &:last-child {
-    margin: 0;
-  }
 
   &:is(:hover, :focus, :focus-visible) {
     color: var(--color-brown);
