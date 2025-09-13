@@ -609,16 +609,12 @@ img {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  gap: 32px;
 }
 
 .nav__item {
-  position: relative;
+  display: block;
   padding: 20px 0;
-  margin-right: 32px;
-
-  &:last-child {
-    margin: 0;
-  }
 
   &:is(:hover, :focus, :focus-visible) {
     color: var(--color-brown);
@@ -1314,10 +1310,29 @@ img {
 }
 
 .hotel-card__stars {
-  background-color: var(--color-gray-second-2);
-  display: block;
-  width: 90px;
   height: 17px;
+  background-image: url(../images/icons/star.svg);
+  background-repeat: space;
+
+  &[data-number-of-stars="5"] {
+    width: 106px;
+  }
+
+  &[data-number-of-stars="4"] {
+    width: 89px;
+  }
+
+  &[data-number-of-stars="3"] {
+    width: 66px;
+  }
+
+  &[data-number-of-stars="2"] {
+    width:42px;
+  }
+
+  &[data-number-of-stars="1"] {
+    width: 22px;
+  }
 }
 
 .hotel-card__rating-amount {
