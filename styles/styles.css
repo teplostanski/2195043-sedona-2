@@ -463,7 +463,7 @@ img {
   width: 10px;
   height: 10px;
   background-size: auto;
-  background-position: auto;
+  background-position: center;
 }
 
 .figure {
