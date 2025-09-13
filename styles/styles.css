@@ -343,9 +343,9 @@ img {
   background-clip: padding-box;
   border: none;
   border-radius: 4px;
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: textfield;
-  appearance: none;
 
   &::placeholder {
     color: #212529;
@@ -975,7 +975,6 @@ img {
     &::before {
       height: 76px;
       margin-bottom: 26px;
-
       background-image: url(../images/icons/gift.svg);
     }
   }
@@ -1290,10 +1289,6 @@ img {
   grid-template-rows: min-content 1fr;
   align-items: center;
   gap: 16px 20px;
-
-  & > span {
-    align-self: end;
-  }
 }
 
 .hotel-card__link {
@@ -1398,34 +1393,6 @@ img {
   background-color: transparent;
   border-color: transparent;
   color: var(--color-text-base);
-}
-
-/* inactive icon - вариант 1 */
-.input__icon {
-  position: relative;
-}
-
-.input__icon::before {
-  content: "";
-  color: #bdbdbd;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  /*top: 0;*/
-  bottom: 50%;
-  right: 0.625rem;
-  top: 50%;
-}
-
-.input__icon_email::before {
-  content: "@";
-}
-
-.input__icon_search::before {
-  width: 1rem;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23bdbdbd' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .modal {
