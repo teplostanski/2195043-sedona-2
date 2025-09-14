@@ -1420,8 +1420,6 @@ img {
   background-color: var(--color-gray-second-2);
   border: none;
   border-radius: 50%;
-  transition: background-color var(--primary-transition-duration)
-    var(--primary-transition-timing-function);
   cursor: pointer;
   color: var(--color-black);
 
