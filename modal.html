@@ -428,7 +428,7 @@
       </footer>
     </div>
 
-    <dialog id="modal" class="modal">
+    <dialog id="modal" class="modal" test="modal">
       <h2 class="modal__title text-xl uppercase">Поиск гостиницы в Седоне</h2>
 
       <button
@@ -625,5 +625,10 @@
         </button>
       </form>
     </dialog>
+
+    <script>
+      const dialog = document.querySelector("dialog");
+      dialog.showModal();
+    </script>
   </body>
 </html>
