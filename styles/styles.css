@@ -1201,7 +1201,8 @@ img {
 }
 
 .results__view-card-toggle {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 8px;
 }
 
