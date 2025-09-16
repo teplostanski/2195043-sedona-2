@@ -1050,6 +1050,7 @@ img {
 
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   line-height: 24px;
 
