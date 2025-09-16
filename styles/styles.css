@@ -217,6 +217,10 @@ img {
   &:is(:focus, :focus-visible) {
     outline: 3px solid var(--color-focus-outline);
   }
+
+    &:active {
+    color: var(--color-button-text-hover);
+  }
 }
 
 .button--large {
@@ -228,11 +232,6 @@ img {
 .button--primary {
   background: var(--color-button-primary);
 
-  &:active {
-    background-color: var(--color-button-primary-hover);
-    color: var(--color-button-text-hover);
-  }
-
   &:is(:hover, :focus, :focus-visible) {
     background-color: var(--color-button-primary-hover);
     color: var(--color-button-text);
@@ -243,11 +242,6 @@ img {
 .button--secondary {
   background: var(--color-button-secondary);
 
-  &:active {
-    background-color: var(--color-button-secondary-hover);
-    color: var(--color-button-text-hover);
-  }
-
   &:is(:hover, :focus, :focus-visible) {
     background-color: var(--color-button-secondary-hover);
     color: var(--color-button-text);
@@ -257,11 +251,6 @@ img {
 
 .button--active {
   background: var(--color-button-active);
-
-  &:active {
-    background-color: var(--color-button-active-hover);
-    color: var(--color-button-text-hover);
-  }
 
   &:is(:hover, :focus, :focus-visible) {
     background-color: var(--color-button-active-hover);
