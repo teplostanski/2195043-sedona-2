@@ -16,7 +16,7 @@
       <header class="main-header" data-test="header">
         <div class="main-header__container">
           <a class="logo link" href="index.html">
-            <img class="logo__image" src="./images/logos/logo.svg" width="140" height="70" alt="Логотип Седона" />
+            <img class="logo__image" src="./images/logos/logo.svg" width="140" height="70" alt="Логотип Седона">
           </a>
 
           <nav class="nav" aria-label="Основная навигация">
@@ -28,7 +28,8 @@
                 <a class="nav__item link text-color-base bold text-sm" href="about.html">О Седоне</a>
               </li>
               <li class="">
-                <a class="nav__item nav__item--current link text-color-base bold text-sm" href="catalog.html">Гостиницы</a>
+                <a class="nav__item nav__item--current link text-color-base bold text-sm"
+                  href="catalog.html">Гостиницы</a>
               </li>
             </ul>
           </nav>
@@ -119,7 +120,7 @@
                   </li>
                   <li class="filter__item checkbox">
                     <input class="filter__input checkbox__input" type="checkbox" name="infrastructure"
-                      id="infrastructure-wifi" value="Wi-Fi" />
+                      id="infrastructure-wifi" value="wi-fi" />
                     <label class="filter__control checkbox__label" for="infrastructure-wifi">
                       Wi-Fi
                     </label>
@@ -166,7 +167,7 @@
                   <div class="input">
                     <div class="input__end-content input-end-text-from">
                       <input class="input__field filter__input-field filter__input-field-end-text-from" type="number"
-                        name="min-price" id="min-price" min="0" max="9000" value="0" required />
+                        name="min-price" id="min-price" min="0" value="0" required />
                     </div>
                   </div>
 
@@ -174,7 +175,7 @@
                   <div class="input">
                     <div class="input__end-content input-end-text-to">
                       <input class="input__field filter__input-field filter__input-field-end-text-to" type="number"
-                        name="max-price" id="max-price" min="0" max="9000" value="9000" required />
+                        name="max-price" id="max-price" min="0" value="9000" required />
                     </div>
                   </div>
                 </div>
@@ -182,9 +183,11 @@
                   <div class="range-slider__track"></div>
                   <div class="range-slider__progress"></div>
                   <div class="range-slider__thumbs">
+                    <label class="visually-hidden" for="range-min-value">Минимальное значение</label>
                     <input class="range-slider__input" id="range-min-value" type="range" min="0" max="100" value="0"
                       step="1" aria-orientation="horizontal" />
 
+                    <label class="visually-hidden" for="range-max-value">Максимальное значение</label>
                     <input class="range-slider__input" id="range-max-value" type="range" min="0" max="100" value="77"
                       step="1" aria-orientation="horizontal" />
                   </div>
@@ -213,7 +216,7 @@
             <div class="results__sort-wrapper">
               <div class="select">
                 <label class="visually-hidden" for="sort-select">Сортировка результата поиска</label>
-                <select class="select__field" aria-label="Сортировка результата поиска" id="sort-select">
+                <select class="select__field" id="sort-select">
                   <option value="popular">Сначала популярные</option>
                   <option value="cheap" selected>Сначала дешевые</option>
                   <option value="expensive">Сначала дорогие</option>
@@ -247,7 +250,7 @@
               <h3 class="hotel-card__title text-lg">Amara Resort & Spa</h3>
               <a class="hotel-card__link link text-color-base" href="#">
                 <img src="./images/hotels/amara-resort-and-spa.jpg" alt="Ночной каньон с пещерой и звёздным небом"
-                  width="300" height="212" />
+                  width="300" height="212">
               </a>
               <span>Гостиница</span>
               <span class="hotel-card__price">От 4000 ₽</span>
@@ -262,7 +265,7 @@
               <h3 class="hotel-card__title text-lg">Villas at Poco Diablo</h3>
               <a class="hotel-card__link link text-color-base" href="#">
                 <img src="./images/hotels/villas-at-poco-diablo.jpg" alt="Радуга над красными скалами после дождя"
-                  width="300" height="212" />
+                  width="300" height="212">
               </a>
 
               <span>Гостиница</span>
@@ -279,7 +282,7 @@
               <h3 class="hotel-card__title text-lg">Desert Quail Inn</h3>
               <a class="hotel-card__link link text-color-base" href="#">
                 <img src="./images/hotels/desert-quail-inn.jpg" alt="Массив красных скал с зеленью" width="300"
-                  height="212" />
+                  height="212">
               </a>
 
               <span>Гостиница</span>
@@ -296,7 +299,7 @@
               <h3 class="hotel-card__title text-lg">GreenTree Inn</h3>
               <a class="hotel-card__link link text-color-base" href="#">
                 <img src="./images/hotels/green-tree-inn.jpg" alt="Звёздное небо над красным утёсом ночью" width="300"
-                  height="212" />
+                  height="212">
               </a>
 
               <span>Гостиница</span>
@@ -313,7 +316,8 @@
 
           <ul class="pagination list" aria-label="Страницы результата поиска">
             <li>
-              <a class="pagination__item pagination__item--current link" href="#" aria-current="page">1</a>
+              <a class="pagination__item pagination__item--current link" href="#" tabindex="-1"
+                aria-current="page">1</a>
             </li>
             <li>
               <a class="pagination__item link" href="#">2</a>
@@ -325,7 +329,7 @@
               <a class="pagination__item link" href="#">4</a>
             </li>
             <li>
-              <a class="pagination__item pagination__item--disabled link" href="#">...</a>
+              <a class="pagination__item pagination__item--disabled link" href="#" tabindex="-1">...</a>
             </li>
             <li>
               <a class="pagination__item link" href="#">10</a>
@@ -338,7 +342,7 @@
             Подпишитесь на рассылку
           </h2>
           <p class="subscribe__description text-color-second text-md">
-            Только полезная информация и никакого спама,<br />честное
+            Только полезная информация и никакого спама,<br>честное
             бойскаутское!
           </p>
 
