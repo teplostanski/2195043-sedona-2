@@ -802,6 +802,7 @@ img {
 .hero {
   padding-top: 51px;
   padding-bottom: 82px;
+  max-height: 485px;
   display: flex;
   background-color: var(--color-image-backdrop);
   background-image: url("../images/backgrounds/hero-decoration-bg.svg"),
@@ -831,6 +832,7 @@ img {
   width: 400px;
   min-height: 385px;
   margin: 0 auto;
+  flex-shrink: 0;
 }
 
 .advantages__item {
@@ -839,6 +841,7 @@ img {
 
 .advantages__item--primary {
   background-color: var(--color-blue);
+  width: 100%;
 
   .advantages__title::after {
     background-color: var(--color-white-a30);
@@ -1296,6 +1299,7 @@ img {
 .pagination {
   font-weight: 700;
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin: 38px 0 0;
 }
@@ -1327,16 +1331,22 @@ img {
   }
 }
 
-.pagination__item--current {
-  background-color: var(--color-gray-second-2);
+.pagination__item--current,
+.pagination__item--disabled {
   border-color: transparent;
   color: var(--color-text-base);
+
+  &:is(:focus, :focus-visible) {
+    outline: none;
+  }
+}
+
+.pagination__item--current {
+  background-color: var(--color-gray-second-2);
 }
 
 .pagination__item--disabled {
   background-color: transparent;
-  border-color: transparent;
-  color: var(--color-text-base);
 }
 
 .modal {
@@ -1457,7 +1467,7 @@ img {
   -moz-appearance: textfield;
 
   &:hover {
-    background-color:  var(--color-gray-second-2);
+    background-color: var(--color-gray-second-2);
   }
 }
 
