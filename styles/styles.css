@@ -210,7 +210,7 @@ img {
   font-size: var(--button-text-base);
   line-height: var(--button-line-height-base);
 
-  &:hover {
+  &:hover:not(:disabled) {
     color: var(--color-button-text-hover);
   }
 
@@ -220,6 +220,13 @@ img {
 
   &:active {
     color: var(--color-button-text-hover);
+  }
+
+  &:disabled {
+    background: var(--color-gray);
+    color: var(--color-text-second);
+    cursor: not-allowed;
+    opacity: 0.5;
   }
 }
 
@@ -232,7 +239,7 @@ img {
 .button--primary {
   background: var(--color-button-primary);
 
-  &:is(:hover, :focus, :focus-visible) {
+  &:is(:hover, :focus, :focus-visible):not(:disabled) {
     background-color: var(--color-button-primary-hover);
     color: var(--color-button-text);
     outline-color: transparent;
@@ -242,7 +249,7 @@ img {
 .button--secondary {
   background: var(--color-button-secondary);
 
-  &:is(:hover, :focus, :focus-visible) {
+  &:is(:hover, :focus, :focus-visible):not(:disabled) {
     background-color: var(--color-button-secondary-hover);
     color: var(--color-button-text);
     outline-color: transparent;
@@ -252,7 +259,7 @@ img {
 .button--active {
   background: var(--color-button-active);
 
-  &:is(:hover, :focus, :focus-visible) {
+  &:is(:hover, :focus, :focus-visible):not(:disabled) {
     background-color: var(--color-button-active-hover);
     color: var(--color-button-text);
     outline-color: var(--color-button-active-hover);
