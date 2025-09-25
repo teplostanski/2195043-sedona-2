@@ -348,7 +348,7 @@ img {
     opacity: 0.6;
   }
 
-  &:is(:focus, :focus-visible, :hover) {
+  &:is(:focus, :focus-visible, :hover):not(:disabled) {
     background-color: var(--color-gray-second);
   }
 
@@ -360,6 +360,11 @@ img {
   &::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
   }
 }
 
@@ -388,12 +393,37 @@ img {
   justify-content: center;
   align-items: center;
 
-  &:hover {
+  &:hover:not(:has(input:disabled)) {
     opacity: 0.6;
+
+    & .checkbox__input,
+    .radio__input {
+      cursor: pointer;
+    }
+
+    & .checkbox__label,
+    .radio__label {
+      cursor: pointer;
+    }
   }
 
   &:active {
     opacity: 0.3;
+  }
+
+  &:has(input:disabled) {
+    opacity: 0.8;
+    cursor: not-allowed;
+
+    & .checkbox__input,
+    .radio__input {
+      cursor: not-allowed;
+    }
+
+    & .checkbox__label,
+    .radio__label {
+      cursor: not-allowed;
+    }
   }
 }
 
@@ -522,36 +552,44 @@ img {
     cursor: pointer;
   }
 
-  &:hover::-webkit-slider-thumb {
+  &:hover::-webkit-slider-thumb:not(:disabled) {
     box-shadow: 0 4px 10px 0 var(--color-black-a25);
   }
 
-  &:hover::-moz-range-thumb {
+  &:hover::-moz-range-thumb:not(:disabled) {
     box-shadow: 0 4px 10px 0 var(--color-black-a25);
   }
 
-  &:focus-visible::-webkit-slider-thumb {
+  &:focus-visible::-webkit-slider-thumb:not(:disabled) {
     outline: 3px solid var(--color-focus-outline);
     box-shadow: 0 4px 10px 0 var(--color-black-a25);
   }
 
-  &:focus-visible::-moz-range-thumb {
+  &:focus-visible::-moz-range-thumb:not(:disabled) {
     outline: 3px solid var(--color-focus-outline);
     box-shadow: 0 4px 10px 0 var(--color-black-a25);
   }
 
-  &:active::-webkit-slider-thumb {
+  &:active::-webkit-slider-thumb:not(:disabled) {
     outline: 2px solid var(--color-focus-outline);
     box-shadow: 0 7px 15px 0 var(--color-black-a40);
   }
 
-  &:active::-moz-range-thumb {
+  &:active::-moz-range-thumb:not(:disabled) {
     outline: 2px solid var(--color-focus-outline);
     box-shadow: 0 7px 15px 0 var(--color-black-a40);
   }
 
   &:focus-visible {
     outline: none;
+  }
+
+  &:disabled::-webkit-slider-thumb {
+    cursor: not-allowed;
+  }
+
+  &:disabled::-moz-range-thumb {
+    cursor: not-allowed;
   }
 }
 
@@ -1390,12 +1428,17 @@ img {
     color: var(--color-black-a30);
   }
 
-  &:is(:focus, :focus-visible, :hover, :active) {
+  &:is(:focus, :focus-visible, :hover, :active):not(:disabled) {
     background-color: var(--color-gray);
   }
 
   &:is(:focus, :focus-visible) {
     outline: 3px solid var(--color-focus-outline);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
   }
 }
 
@@ -1495,13 +1538,18 @@ img {
   border: none;
   cursor: pointer;
 
-  &:is(:hover, :focus, :focus-visible, :active) {
+  &:is(:hover, :focus, :focus-visible, :active):not(:disabled) {
     color: var(--color-black);
   }
 
   &:active {
     opacity: 0.2;
     outline: none;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
   }
 }
 
@@ -1535,15 +1583,21 @@ img {
 .modal__tooltip-button {
   position: relative;
   flex-shrink: 0;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
 }
 
 @media (hover: hover) {
-  .tooltip {
-    &:is(:hover, :focus, :focus-visible) .tooltip__content {
-      display: block;
+    .tooltip:not(:disabled) {
+        &:is(:hover, :focus, :focus-visible) .tooltip__content {
+            display: block;
+        }
     }
-  }
 }
+
 
 .tooltip__content {
   position: absolute;

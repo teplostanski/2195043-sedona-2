@@ -2,11 +2,11 @@
 <html lang="ru">
 
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./favicon.ico" />
-    <link rel="icon" type="image/png" href="./images/icons/favicon.png" sizes="32x32" />
-    <link rel="stylesheet" href="./styles/styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" type="image/png" href="./images/icons/favicon.png" sizes="32x32">
+    <link rel="stylesheet" href="./styles/styles.css">
 
     <title>HTML Academy: Седона</title>
   </head>
@@ -218,7 +218,7 @@
             aria-label="Форма подписки на рассылку">
             <label for="subscribe-email" class="visually-hidden"> Email </label>
             <input id="subscribe-email" class="subscribe__input input__field" type="email" name="subscribe-email"
-              placeholder="Ваш e-mail" required />
+              placeholder="Ваш e-mail" required>
             <button class="subscribe__button button button--large button--secondary" type="submit">
               Подписаться
             </button>
@@ -334,7 +334,7 @@
           <label class="modal__label" for="check-in"> Дата заезда: </label>
           <div class="input__end-content input-end-icon-calendar">
             <input class="modal__input-field input__field" id="check-in" type="text" name="check-in"
-              placeholder="Укажите дату" value="27 апреля 2020" required autofocus />
+              placeholder="Укажите дату" value="27 апреля 2020" required autofocus>
           </div>
 
           <span class="modal__hint modal__hint--error">Мы не можем отправить вас в прошлое.</span>
@@ -344,7 +344,7 @@
           <label class="modal__label" for="check-out"> Дата выезда: </label>
           <div class="input__end-content input-end-icon-calendar">
             <input class="modal__input-field input__field" id="check-out" type="text" name="check-out"
-              placeholder="Укажите дату" value="1 сентября 2023" required />
+              placeholder="Укажите дату" value="1 сентября 2023" required>
           </div>
 
           <span class="modal__hint">На эти даты есть свободные номера. Пока есть.</span>
@@ -354,22 +354,23 @@
           <div class="modal__input modal__input--number">
             <label class="modal__label" for="adult-amount"> Взрослые: </label>
             <div class="modal__input-number input">
-              <button class="modal__input-number-button modal__input-number-button--dec button" type="button">
+              <button class="modal__input-number-button modal__input-number-button--dec" type="button">
                 <span class="visually-hidden">Уменьшить число взрослых гостей</span>
                 <svg width="14" height="2" viewBox="0 0 14 2" fill="currentColor" aria-hidden="true" focusable="false"
                   xmlns="http://www.w3.org/2000/svg">
                   <path d="M0 0L0 2L14 2V0L0 0Z"></path>
                 </svg>
               </button>
-              <input class="modal__input-number-field input__field" id="adult-amount" name="adult-amount" type="number"
-                min="1" placeholder="1" value="2" required />
-              <button class="modal__input-number-button modal__input-number-button--inc button" type="button">
+              <button class="modal__input-number-button modal__input-number-button--inc" type="button">
                 <span class="visually-hidden">Увеличить число взрослых гостей</span>
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true" focusable="false"
                   xmlns="http://www.w3.org/2000/svg">
                   <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"></path>
                 </svg>
               </button>
+              <input class="modal__input-number-field input__field" id="adult-amount" name="adult-amount"
+                type="number" min="1" placeholder="1" value="2" required>
+
             </div>
           </div>
 
@@ -385,22 +386,23 @@
             </div>
 
             <div class="modal__input-number input">
-              <button class="modal__input-number-button modal__input-number-button--dec button" type="button">
+              <button class="modal__input-number-button modal__input-number-button--dec" type="button">
                 <span class="visually-hidden">Уменьшить число взрослых гостей</span>
                 <svg width="14" height="2" viewBox="0 0 14 2" fill="currentColor" aria-hidden="true" focusable="false"
                   xmlns="http://www.w3.org/2000/svg">
                   <path d="M0 0L0 2L14 2V0L0 0Z"></path>
                 </svg>
               </button>
-              <input class="modal__input-number-field input__field" id="children-amount" name="children-amount"
-                type="number" min="0" placeholder="0" value="2" required />
-              <button class="modal__input-number-button modal__input-number-button--inc button" type="button">
+
+              <button class="modal__input-number-button modal__input-number-button--inc" type="button">
                 <span class="visually-hidden">Увеличить число взрослых гостей</span>
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true" focusable="false"
                   xmlns="http://www.w3.org/2000/svg">
                   <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z"></path>
                 </svg>
               </button>
+              <input class="modal__input-number-field input__field" id="children-amount" name="children-amount"
+                type="number" min="0" placeholder="0" value="2" required>
             </div>
           </div>
         </div>
