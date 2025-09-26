@@ -2,11 +2,11 @@
 <html lang="ru">
 
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./favicon.ico" />
-    <link rel="icon" type="image/png" href="./images/icons/favicon.png" sizes="32x32" />
-    <link rel="stylesheet" href="./styles/styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" type="image/png" href="./images/icons/favicon.png" sizes="32x32">
+    <link rel="stylesheet" href="./styles/styles.css">
 
     <title>Каталог</title>
   </head>
@@ -68,7 +68,7 @@
       <main class="main" data-test="main">
         <section class="filter" data-test="filter">
           <header class="filter__header">
-            <h1 class="filter__title text-xxl text-color-alt">
+            <h1 class="filter__title text-xxl text-color-alt bold">
               Гостиницы Седоны
             </h1>
             <ol class="breadcrumbs list text-color-alt">
@@ -104,23 +104,23 @@
                   Инфраструктура:
                 </legend>
                 <ul class="filter__list list">
-                  <li class="filter__item checkbox">
+                  <li class="checkbox">
                     <input class="filter__input checkbox__input" type="checkbox" name="infrastructure"
-                      id="infrastructure-pool" value="pool" checked />
+                      id="infrastructure-pool" value="pool" checked>
                     <label class="filter__control checkbox__label" for="infrastructure-pool">
                       Бассейн
                     </label>
                   </li>
-                  <li class="filter__item checkbox">
+                  <li class="checkbox">
                     <input class="filter__input checkbox__input" type="checkbox" name="infrastructure"
-                      id="infrastructure-parking" value="parking" checked />
+                      id="infrastructure-parking" value="parking" checked>
                     <label class="filter__control checkbox__label" for="infrastructure-parking">
                       Парковка
                     </label>
                   </li>
-                  <li class="filter__item checkbox">
+                  <li class="checkbox">
                     <input class="filter__input checkbox__input" type="checkbox" name="infrastructure"
-                      id="infrastructure-wifi" value="wi-fi" />
+                      id="infrastructure-wifi" value="wi-fi">
                     <label class="filter__control checkbox__label" for="infrastructure-wifi">
                       Wi-Fi
                     </label>
@@ -132,23 +132,23 @@
                   Тип жилья:
                 </legend>
                 <ul class="filter__list list">
-                  <li class="filter__item radio">
+                  <li class="radio">
                     <input class="filter__input radio__input" type="radio" name="room-type" id="room-type-hotel"
-                      value="hotel" checked />
+                      value="hotel" checked>
                     <label class="filter__control radio__label" for="room-type-hotel">
                       Гостиница
                     </label>
                   </li>
-                  <li class="filter__item radio">
+                  <li class="radio">
                     <input class="filter__input radio__input" type="radio" name="room-type" id="room-type-motel"
-                      value="motel" />
+                      value="motel">
                     <label class="filter__control radio__label" for="room-type-motel">
                       Мотель
                     </label>
                   </li>
-                  <li class="filter__item radio">
+                  <li class="radio">
                     <input class="filter__input radio__input" type="radio" name="room-type" id="room-type-apartment"
-                      value="apartment" />
+                      value="apartment">
                     <label class="filter__control radio__label" for="room-type-apartment">
                       Апартаменты
                     </label>
@@ -167,7 +167,7 @@
                   <div class="input">
                     <div class="input__end-content input-end-text-from">
                       <input class="input__field filter__input-field filter__input-field-end-text-from" type="number"
-                        name="min-price" id="min-price" min="0" value="0" required />
+                        name="min-price" id="min-price" min="0" value="0" required>
                     </div>
                   </div>
 
@@ -175,7 +175,7 @@
                   <div class="input">
                     <div class="input__end-content input-end-text-to">
                       <input class="input__field filter__input-field filter__input-field-end-text-to" type="number"
-                        name="max-price" id="max-price" min="0" value="9000" required />
+                        name="max-price" id="max-price" min="0" value="9000" required>
                     </div>
                   </div>
                 </div>
@@ -185,11 +185,11 @@
                   <div class="range-slider__thumbs">
                     <label class="visually-hidden" for="range-min-value">Минимальное значение</label>
                     <input class="range-slider__input" id="range-min-value" type="range" min="0" max="100" value="0"
-                      step="1" aria-orientation="horizontal" />
+                      step="1" aria-orientation="horizontal">
 
                     <label class="visually-hidden" for="range-max-value">Максимальное значение</label>
                     <input class="range-slider__input" id="range-max-value" type="range" min="0" max="100" value="77"
-                      step="1" aria-orientation="horizontal" />
+                      step="1" aria-orientation="horizontal">
                   </div>
                 </div>
               </fieldset>
@@ -224,20 +224,20 @@
               </div>
               <ul class="results__view-card-toggle list" role="group" aria-label="Переключение вида каталога">
                 <li>
-                  <a class="results__view-item results__view-item--current results__view-item--mode-tile" href="#"
-                    role="button" aria-pressed="true">
+                  <a class="results__view-item results__view-item--current results__view-item--mode-tile"
+                    href="catalog.html?view=tile" role="button" aria-pressed="true">
                     <span class="visually-hidden">Показать плитку</span>
                   </a>
                 </li>
                 <li>
-                  <a class="results__view-item results__view-item--mode-card" href="#" role="button"
-                    aria-pressed="false">
+                  <a class="results__view-item results__view-item--mode-card" href="catalog.html?view=card"
+                    role="button" aria-pressed="false">
                     <span class="visually-hidden">Показать карточки</span>
                   </a>
                 </li>
                 <li>
-                  <a class="results__view-item results__view-item--mode-list" href="#" role="button"
-                    aria-pressed="false">
+                  <a class="results__view-item results__view-item--mode-list" href="catalog.html?view=list"
+                    role="button" aria-pressed="false">
                     <span class="visually-hidden">Показать список</span>
                   </a>
                 </li>
@@ -247,10 +247,10 @@
 
           <ul class="results__cards list">
             <li class="hotel-card">
-              <h3 class="hotel-card__title text-lg">Amara Resort & Spa</h3>
+              <h3 class="hotel-card__title text-lg bold">Amara Resort & Spa</h3>
               <a class="hotel-card__link link text-color-base" href="#">
-                <img src="./images/hotels/amara-resort-and-spa.jpg" alt="Ночной каньон с пещерой и звёздным небом"
-                  width="300" height="212">
+                <img class="hotel-card__image" src="./images/hotels/amara-resort-and-spa.jpg"
+                  alt="Ночной каньон с пещерой и звёздным небом" width="300" height="212">
               </a>
               <span>Гостиница</span>
               <span class="hotel-card__price">От 4000 ₽</span>
@@ -259,13 +259,13 @@
                 В избранное
               </button>
               <span class="hotel-card__stars" data-number-of-stars="4" aria-label="Отель 4 звезды"></span>
-              <span class="hotel-card__rating-amount text-color-second uppercase">Рейтинг: 8.5</span>
+              <span class="hotel-card__rating-amount text-color-second uppercase">Рейтинг: 8,5</span>
             </li>
             <li class="hotel-card">
-              <h3 class="hotel-card__title text-lg">Villas at Poco Diablo</h3>
+              <h3 class="hotel-card__title text-lg bold">Villas at Poco Diablo</h3>
               <a class="hotel-card__link link text-color-base" href="#">
-                <img src="./images/hotels/villas-at-poco-diablo.jpg" alt="Радуга над красными скалами после дождя"
-                  width="300" height="212">
+                <img class="hotel-card__image" src="./images/hotels/villas-at-poco-diablo.jpg"
+                  alt="Радуга над красными скалами после дождя" width="300" height="212">
               </a>
 
               <span>Гостиница</span>
@@ -276,13 +276,13 @@
               </button>
 
               <span class="hotel-card__stars" data-number-of-stars="4" aria-label="Отель 4 звезды"></span>
-              <span class="hotel-card__rating-amount text-color-second uppercase">Рейтинг: 9.2</span>
+              <span class="hotel-card__rating-amount text-color-second uppercase">Рейтинг: 9,2</span>
             </li>
             <li class="hotel-card">
-              <h3 class="hotel-card__title text-lg">Desert Quail Inn</h3>
+              <h3 class="hotel-card__title text-lg bold">Desert Quail Inn</h3>
               <a class="hotel-card__link link text-color-base" href="#">
-                <img src="./images/hotels/desert-quail-inn.jpg" alt="Массив красных скал с зеленью" width="300"
-                  height="212">
+                <img class="hotel-card__image" src="./images/hotels/desert-quail-inn.jpg"
+                  alt="Массив красных скал с зеленью" width="300" height="212">
               </a>
 
               <span>Гостиница</span>
@@ -293,13 +293,13 @@
               </button>
 
               <span class="hotel-card__stars" data-number-of-stars="3" aria-label="Отель 3 звезды"></span>
-              <span class="hotel-card__rating-amount text-color-second uppercase">Рейтинг: 6.9</span>
+              <span class="hotel-card__rating-amount text-color-second uppercase">Рейтинг: 6,9</span>
             </li>
             <li class="hotel-card">
-              <h3 class="hotel-card__title text-lg">GreenTree Inn</h3>
+              <h3 class="hotel-card__title text-lg bold">GreenTree Inn</h3>
               <a class="hotel-card__link link text-color-base" href="#">
-                <img src="./images/hotels/green-tree-inn.jpg" alt="Звёздное небо над красным утёсом ночью" width="300"
-                  height="212">
+                <img class="hotel-card__image" src="./images/hotels/green-tree-inn.jpg"
+                  alt="Звёздное небо над красным утёсом ночью" width="300" height="212">
               </a>
 
               <span>Гостиница</span>
@@ -310,7 +310,7 @@
               </button>
 
               <span class="hotel-card__stars" data-number-of-stars="2" aria-label="Отель 2 звезды"></span>
-              <span class="hotel-card__rating-amount text-color-second uppercase">Рейтинг: 5.0</span>
+              <span class="hotel-card__rating-amount text-color-second uppercase">Рейтинг: 5,0</span>
             </li>
           </ul>
 
@@ -329,7 +329,7 @@
               <a class="pagination__item link" href="#">4</a>
             </li>
             <li>
-              <a class="pagination__item pagination__item--disabled link" href="#" tabindex="-1">...</a>
+              <span class="pagination__item pagination__item--disabled link">...</span>
             </li>
             <li>
               <a class="pagination__item link" href="#">10</a>
@@ -338,7 +338,7 @@
         </section>
 
         <section class="subscribe" data-test="subscribe">
-          <h2 class="subscribe__title text-xl uppercase">
+          <h2 class="subscribe__title text-xl uppercase bold">
             Подпишитесь на рассылку
           </h2>
           <p class="subscribe__description text-color-second text-md">
@@ -350,7 +350,7 @@
             aria-label="Форма подписки на рассылку">
             <label for="subscribe-email" class="visually-hidden"> Email </label>
             <input id="subscribe-email" class="subscribe__input input__field" type="email" name="subscribe-email"
-              placeholder="Ваш e-mail" required />
+              placeholder="Ваш e-mail" required>
             <button class="subscribe__button button button--large button--secondary" type="submit">
               Подписаться
             </button>
@@ -402,6 +402,7 @@
           <address class="contacts" aria-label="Контакты">
             <a class="phone link" href="tel:+78128121212">+7 (812) 812-12-12</a>
           </address>
+
           <a class="copyright link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"
             rel="noopener noreferrer">
             <span class="visually-hidden">Логотип HTML Academy</span>
