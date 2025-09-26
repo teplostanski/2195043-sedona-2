@@ -215,7 +215,10 @@ img {
   }
 
   &:is(:focus, :focus-visible) {
-    outline: 3px solid var(--color-focus-outline);
+    outline-color: var(--color-focus-outline);
+    outline-width: 3px;
+    outline-style: solid;
+    outline-offset: 2px;
   }
 
   &:active {
@@ -242,7 +245,7 @@ img {
   &:is(:hover, :focus, :focus-visible):not(:disabled) {
     background-color: var(--color-button-primary-hover);
     color: var(--color-button-text);
-    outline-color: transparent;
+    outline-color: var(--color-button-primary);
   }
 }
 
@@ -252,7 +255,7 @@ img {
   &:is(:hover, :focus, :focus-visible):not(:disabled) {
     background-color: var(--color-button-secondary-hover);
     color: var(--color-button-text);
-    outline-color: transparent;
+    outline-color: var(--color-button-secondary);
   }
 }
 
@@ -262,7 +265,7 @@ img {
   &:is(:hover, :focus, :focus-visible):not(:disabled) {
     background-color: var(--color-button-active-hover);
     color: var(--color-button-text);
-    outline-color: var(--color-button-active-hover);
+    outline-color: var(--color-button-active);
   }
 }
 
@@ -552,30 +555,30 @@ img {
     cursor: pointer;
   }
 
-  &:hover::-webkit-slider-thumb:not(:disabled) {
+  &:hover:not(:disabled)::-webkit-slider-thumb {
     box-shadow: 0 4px 10px 0 var(--color-black-a25);
   }
 
-  &:hover::-moz-range-thumb:not(:disabled) {
+  &:hover:not(:disabled)::-moz-range-thumb {
     box-shadow: 0 4px 10px 0 var(--color-black-a25);
   }
 
-  &:focus-visible::-webkit-slider-thumb:not(:disabled) {
+  &:focus-visible:not(:disabled)::-webkit-slider-thumb {
     outline: 3px solid var(--color-focus-outline);
     box-shadow: 0 4px 10px 0 var(--color-black-a25);
   }
 
-  &:focus-visible::-moz-range-thumb:not(:disabled) {
+  &:focus-visible:not(:disabled)::-moz-range-thumb {
     outline: 3px solid var(--color-focus-outline);
     box-shadow: 0 4px 10px 0 var(--color-black-a25);
   }
 
-  &:active::-webkit-slider-thumb:not(:disabled) {
+  &:active:not(:disabled)::-webkit-slider-thumb {
     outline: 2px solid var(--color-focus-outline);
     box-shadow: 0 7px 15px 0 var(--color-black-a40);
   }
 
-  &:active::-moz-range-thumb:not(:disabled) {
+  &:active:not(:disabled)::-moz-range-thumb {
     outline: 2px solid var(--color-focus-outline);
     box-shadow: 0 7px 15px 0 var(--color-black-a40);
   }
@@ -1393,6 +1396,10 @@ img {
     ) {
     background-color: var(--color-blue-2);
     cursor: pointer;
+    outline-color: var(--color-focus-outline);
+    outline-width: 3px;
+    outline-style: solid;
+    outline-offset: 2px;
   }
 
   &:active:not(.pagination__item--current, .pagination__item--disabled) {
