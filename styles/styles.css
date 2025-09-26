@@ -789,11 +789,12 @@ img {
 }
 
 .contact-info {
-  padding: 45px 70px 30px;
+  margin: 45px 70px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+  min-height: 40px;
 }
 
 .contacts {
@@ -839,7 +840,10 @@ img {
 }
 
 .copyright {
+  display: flex;
   flex-shrink: 0;
+  height: 40px;
+  align-items: center;
 
   &:is(:hover, :focus, :focus-visible, :active) {
     color: var(--color-brown);
